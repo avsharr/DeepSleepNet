@@ -21,7 +21,6 @@ from datasets import SequentialSleepDataset
 from models import DeepSleepNet
 from preprocessing import CLASS_NAMES
 
-# --- Configuration ---
 BATCH_SIZE = 16
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 
@@ -130,21 +129,19 @@ def plot_class_distribution(y_true, y_pred, class_names, save_path='class_distri
     
     plt.tight_layout()
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
-    print(f"✓ Class distribution saved: {save_path}")
+    print(f"Class distribution saved: {save_path}")
     plt.close()
 
 
 def print_detailed_metrics(y_true, y_pred, class_names):
     """Print detailed metrics to console"""
-    print("\n" + "=" * 70)
     print("DETAILED MODEL METRICS")
-    print("=" * 70)
     
     # Overall metrics
     accuracy = accuracy_score(y_true, y_pred)
     kappa = cohen_kappa_score(y_true, y_pred)
     
-    print(f"\n📊 OVERALL METRICS:")
+    print(f"\n OVERALL METRICS:")
     print(f"   Accuracy:                     {accuracy * 100:.2f}%")
     print(f"   Cohen's Kappa:                {kappa:.4f}")
     
@@ -156,9 +153,8 @@ def print_detailed_metrics(y_true, y_pred, class_names):
     # Count examples of each class
     class_counts = np.bincount(y_true, minlength=len(class_names))
     
-    print(f"\n📈 METRICS PER CLASS:")
+    print(f"\n METRICS PER CLASS:")
     print(f"{'Class':<10} {'Count':<10} {'Precision':<12} {'Recall':<12} {'F1-Score':<12}")
-    print("-" * 70)
     
     for i, name in enumerate(class_names):
         print(f"{name:<10} {class_counts[i]:<10} {precision[i]:<12.4f} {recall[i]:<12.4f} {f1[i]:<12.4f}")
@@ -172,7 +168,7 @@ def print_detailed_metrics(y_true, y_pred, class_names):
     weighted_recall = recall_score(y_true, y_pred, average='weighted', zero_division=0)
     weighted_f1 = f1_score(y_true, y_pred, average='weighted', zero_division=0)
     
-    print(f"\n📊 AVERAGE METRICS:")
+    print(f"\nAVERAGE METRICS:")
     print(f"   Macro Average:")
     print(f"      Precision: {macro_precision:.4f}")
     print(f"      Recall:    {macro_recall:.4f}")
@@ -182,10 +178,9 @@ def print_detailed_metrics(y_true, y_pred, class_names):
     print(f"      Recall:    {weighted_recall:.4f}")
     print(f"      F1-Score:  {weighted_f1:.4f}")
     
-    print("\n" + "=" * 70)
     
     # Classification report from sklearn
-    print("\n📋 CLASSIFICATION REPORT (sklearn):")
+    print("\nCLASSIFICATION REPORT (sklearn):")
     print(classification_report(y_true, y_pred, target_names=class_names, digits=4))
 
 
@@ -195,38 +190,25 @@ def main():
     os.makedirs(figures_dir, exist_ok=True)
 
     model_path = get_model_path(ROOT, prefer_best=True)
-    if model_path is None:
-        print("Error: Model file not found. Searched: checkpoints/ and root.")
-        return
-    print("Using best model" if "best" in model_path else "Using final model")
-
-    print("\nLoading test dataset...")
+   
     test_ds = SequentialSleepDataset(data_path, mode='test', normalize=True)
     test_loader = DataLoader(test_ds, batch_size=BATCH_SIZE, shuffle=False)
-    print(f"Loaded {len(test_ds)} sequences")
 
-    print("Loading model...")
     model = DeepSleepNet(n_classes=5).to(DEVICE)
     model.load_state_dict(torch.load(model_path, map_location=DEVICE))
     model.eval()
-    print("✓ Model loaded")
 
-    print("\nRunning predictions...")
     all_labels, all_preds = run_predictions(model, test_loader, DEVICE)
-    print(f"✓ Predictions completed. Total epochs: {len(all_labels)}")
 
     print_detailed_metrics(all_labels, all_preds, CLASS_NAMES)
 
-    print("\n" + "=" * 70)
-    print("Creating visualizations...")
-    print("=" * 70)
     plot_confusion_matrix(all_labels, all_preds, CLASS_NAMES,
                          save_path=os.path.join(figures_dir, 'confusion_matrix.png'))
     plot_metrics_per_class(all_labels, all_preds, CLASS_NAMES,
                           save_path=os.path.join(figures_dir, 'metrics_per_class.png'))
     plot_class_distribution(all_labels, all_preds, CLASS_NAMES,
                             save_path=os.path.join(figures_dir, 'class_distribution.png'))
-    print(f"\n✓ All visualizations saved to {figures_dir}")
+    print(f"\nAll visualizations saved to {figures_dir}")
 
 
 if __name__ == "__main__":
