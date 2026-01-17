@@ -1,13 +1,13 @@
 """
-Run data preprocessing: raw EDF -> npz (epochs with labels).
+Run data preprocessing: raw EDF to npz (epochs with labels)
 """
+
 import sys
 import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
 from preprocessing import process, RAW_DATA, PROCESSED_DATA
-
 
 def main():
     files = os.listdir(RAW_DATA)
@@ -23,7 +23,6 @@ def main():
                 os.path.join(RAW_DATA, hyp_candidates[0]),
                 os.path.join(PROCESSED_DATA, psg.replace(".edf", ".npz"))
             )
-
 
 if __name__ == "__main__":
     main()
