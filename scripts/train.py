@@ -13,14 +13,14 @@ from preprocessing import compute_class_weights as compute_class_weights_from_la
 from datasets import SequentialSleepDataset
 from models import DeepSleepNet
 
-# --- Configuration ---
-BATCH_SIZE = 16  # Smaller batch size for LSTM sequences
-EPOCHS = 50  # Increased with early stopping
+
+BATCH_SIZE = 16  # small batchfor LSTM 
+EPOCHS = 50  # with early stopping
 LEARNING_RATE = 1e-4
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
-EARLY_STOPPING_PATIENCE = 7  # Stop if no improvement for 7 epochs
+EARLY_STOPPING_PATIENCE = 7  # stop if no improvement for 7 epochs
 
-print(f"Using device: {DEVICE}")
+print(f"Use device: {DEVICE}")
 
 
 def train_epoch(model, loader, criterion, optimizer):
@@ -32,27 +32,27 @@ def train_epoch(model, loader, criterion, optimizer):
     loop = tqdm(loader, desc="Training", leave=False)
 
     for signals, labels in loop:
-        # Move to device
+        # move to device
         signals = signals.to(DEVICE)
         labels = labels.to(DEVICE)
 
-        # Flatten labels (Batch * Seq)
+        # flatten labels (Batch * Seq)
         labels_flat = labels.view(-1)
 
-        # Forward
+        # forward
         outputs = model(signals)
         loss = criterion(outputs, labels_flat)
 
-        # Backward
+        # backward
         optimizer.zero_grad()
         loss.backward()
 
-        # Clip gradients (important for LSTM)
+        # clip gradients 
         torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
 
         optimizer.step()
 
-        # Metrics
+        # metrics
         running_loss += loss.item()
         _, predicted = torch.max(outputs.data, 1)
         total += labels_flat.size(0)
@@ -106,7 +106,7 @@ def compute_class_weights(data_path):
 def main():
     data_path = os.path.join(ROOT, 'data', 'preprocessed')
 
-    # Load Data
+    # load Data
     train_ds = SequentialSleepDataset(data_path, mode='train', normalize=True)
     val_ds = SequentialSleepDataset(data_path, mode='val', normalize=True)
     test_ds = SequentialSleepDataset(data_path, mode='test', normalize=True)
@@ -116,38 +116,38 @@ def main():
     val_loader = DataLoader(val_ds, batch_size=BATCH_SIZE, shuffle=False)
     test_loader = DataLoader(test_ds, batch_size=BATCH_SIZE, shuffle=False)
 
-    # Init Model
+    # init model
     model = DeepSleepNet(n_classes=5).to(DEVICE)
 
-    # Compute class weights automatically
+    # compute weights automatically
     class_weights_array = compute_class_weights(data_path)
     class_weights = torch.tensor(class_weights_array, dtype=torch.float32).to(DEVICE)
 
     criterion = nn.CrossEntropyLoss(weight=class_weights)
 
-    # weight_decay=1e-3 (L2)
+    # weight_decay = L2
     optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE, weight_decay=1e-3)
     
-    # Learning rate scheduler
+    # LR scheduler
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(
         optimizer, mode='max', factor=0.5, patience=3, min_lr=1e-6
     )
 
-    # Early stopping
+    # early stopping
     best_val_acc = 0.0
     no_improve = 0
     checkpoints_dir = os.path.join(ROOT, "checkpoints")
     os.makedirs(checkpoints_dir, exist_ok=True)
     best_model_path = os.path.join(checkpoints_dir, "deepsleepnet_best_model.pth")
 
-    # Training Loop
+    # training Loop
     for epoch in range(EPOCHS):
         print(f"\nEpoch {epoch + 1}/{EPOCHS}")
 
         t_loss, t_acc = train_epoch(model, train_loader, criterion, optimizer)
         v_loss, v_acc = evaluate(model, val_loader, criterion)
 
-        # Update learning rate
+        # update learning rate
         old_lr = optimizer.param_groups[0]['lr']
         scheduler.step(v_acc)
         new_lr = optimizer.param_groups[0]['lr']
@@ -158,7 +158,7 @@ def main():
         print(f"Train Loss: {t_loss:.4f} | Acc: {t_acc:.2f}%")
         print(f"Val Loss:   {v_loss:.4f} | Acc: {v_acc:.2f}%")
 
-        # Early stopping and save best model
+        # early stopping and save best model
         if v_acc > best_val_acc:
             best_val_acc = v_acc
             no_improve = 0
@@ -171,18 +171,14 @@ def main():
                 print(f"Best validation accuracy: {best_val_acc:.2f}%")
                 break
 
-    # Load best model for final test
-    print("\n" + "="*50)
-    print("Loading best model for final test evaluation...")
+    # load best model for final test
     model.load_state_dict(torch.load(best_model_path))
     test_loss, test_acc = evaluate(model, test_loader, criterion)
     print(f"Test Loss: {test_loss:.4f} | Test Acc: {test_acc:.2f}%")
-    print("="*50)
 
-    # Save final model
+    # save final model
     torch.save(model.state_dict(), os.path.join(checkpoints_dir, "deepsleepnet_model.pth"))
     print("Final model saved.")
-
 
 if __name__ == "__main__":
     main()
