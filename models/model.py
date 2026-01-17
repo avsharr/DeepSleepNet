@@ -6,11 +6,11 @@ class ResBlock(nn.Module):
     def __init__(self, in_channels, out_channels, stride=1, downsample=None):
         super(ResBlock, self).__init__()
 
-        # Standard ResNet block: Conv -> BN -> ReLU -> Dropout -> Conv -> BN
+        # ResNet = Conv BN ReLU Dropout Conv BN
         self.conv1 = nn.Conv1d(in_channels, out_channels, kernel_size=3, stride=stride, padding=1, bias=False)
         self.bn1 = nn.BatchNorm1d(out_channels)
         self.relu = nn.ReLU(inplace=True)
-        self.dropout = nn.Dropout(0.2)  # Reduced from 0.5 to 0.2
+        self.dropout = nn.Dropout(0.2)  
 
         self.conv2 = nn.Conv1d(out_channels, out_channels, kernel_size=3, stride=1, padding=1, bias=False)
         self.bn2 = nn.BatchNorm1d(out_channels)
