@@ -2,13 +2,9 @@ import os
 import requests
 from tqdm import tqdm
 
-# 1. Resolve paths dynamically
-# get the directory of this script
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
-
-# my data is here
-OUTPUT_DIR = os.path.join(PROJECT_ROOT, "data", "raw")
+# resolve paths: project root (parent of scripts/)
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUTPUT_DIR = os.path.join(ROOT, "data", "raw")
 
 BASE_URL = "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/"
 

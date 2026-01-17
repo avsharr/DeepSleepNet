@@ -1,3 +1,6 @@
 data/
 .venv/
 .idea/
+checkpoints/
+__pycache__/
+*.pyc

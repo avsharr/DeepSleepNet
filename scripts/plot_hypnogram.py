@@ -2,10 +2,9 @@ import os
 import mne
 import matplotlib.pyplot as plt
 
-# get the path of the data directory
-script_dir = os.path.dirname(os.path.abspath(__file__))
-project_root = os.path.dirname(script_dir)
-data_dir = os.path.join(project_root, "data", "raw")
+# project root (parent of scripts/)
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+data_dir = os.path.join(ROOT, "data", "raw")
 
 # just an example of the annotated data
 psg_file = os.path.join(data_dir, "SC4001E0-PSG.edf")
@@ -24,7 +23,7 @@ event_id = {
     'Sleep stage 1': 2,
     'Sleep stage 2': 3,
     'Sleep stage 3': 4,
-    'Sleep stage 4': 4, # merge stages 3 and 4 into deep sleep (N3) as sleep annotation rules were changed
+    'Sleep stage 4': 4,  # merge stages 3 and 4 into deep sleep (N3) as sleep annotation rules were changed
     'Sleep stage R': 5
 }
 
@@ -32,7 +31,7 @@ event_id = {
 events, _ = mne.events_from_annotations(
     raw,
     event_id=event_id,
-    chunk_duration=30.0 # standard sleep epoch is 30 seconds
+    chunk_duration=30.0  # standard sleep epoch is 30 seconds
 )
 
 # plot the Hypnogram
