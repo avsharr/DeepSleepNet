@@ -43,7 +43,7 @@ class DeepSleepNet(nn.Module):
     def __init__(self, n_classes=5):
         super(DeepSleepNet, self).__init__()
 
-        # --- Branch 1: Small Filter (Temporal) ---
+        # branch 1: Small Filter = Temporal
         self.small_cnn = nn.Sequential(
             # Initial large conv
             nn.Conv1d(1, 64, kernel_size=50, stride=6, padding=24, bias=False),
@@ -52,7 +52,7 @@ class DeepSleepNet(nn.Module):
             nn.MaxPool1d(8, stride=8),
             nn.Dropout(0.2),  # Reduced from 0.5 to 0.2
 
-            # Residual Blocks
+            # residual Blocks
             self._make_layer(64, 64, stride=1),
             self._make_layer(64, 64, stride=1),
             self._make_layer(64, 64, stride=1),
@@ -60,7 +60,7 @@ class DeepSleepNet(nn.Module):
             nn.MaxPool1d(4, stride=4)
         )
 
-        # --- Branch 2: Large Filter (Frequency) ---
+        # branch 2: Large Filter = Frequency
         self.large_cnn = nn.Sequential(
             # Initial massive conv
             nn.Conv1d(1, 64, kernel_size=400, stride=50, padding=200, bias=False),
@@ -69,7 +69,7 @@ class DeepSleepNet(nn.Module):
             nn.MaxPool1d(4, stride=4),
             nn.Dropout(0.2),  # Reduced from 0.5 to 0.2
 
-            # Residual Blocks
+            # residual blocks
             self._make_layer(64, 64, stride=1),
             self._make_layer(64, 64, stride=1),
             self._make_layer(64, 64, stride=1),
@@ -79,16 +79,14 @@ class DeepSleepNet(nn.Module):
 
         self.dropout = nn.Dropout(0.3)  # Reduced from 0.5 to 0.3
 
-        # --- Automatic Feature Size Calculation ---
-        # We pass a dummy input to calculate exact output size
-        # This prevents "RuntimeError: Expected X, got Y" forever
+        # automatic feature size calculation = We pass a dummy input to calculate exact output size
         dummy_input = torch.zeros(1, 1, 3000)
         small_out = self.small_cnn(dummy_input)
         large_out = self.large_cnn(dummy_input)
 
         self.features_dim = small_out.numel() + large_out.numel()
 
-        # --- Sequence Learning (LSTM) ---
+        # LSTM
         self.lstm = nn.LSTM(
             input_size=self.features_dim,
             hidden_size=512,
