@@ -1,0 +1,914 @@
+2026-01-24 05:51:58,425 - __main__ - INFO - Starting DeepSleepNet pipeline
+2026-01-24 05:51:58,425 - __main__ - INFO - Project root: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet
+2026-01-24 05:51:58,436 - __main__ - INFO - Raw data already exists. Skipping download.
+2026-01-24 05:51:58,444 - __main__ - INFO - Preprocessed data already exists. Skipping preprocessing.
+2026-01-24 05:51:58,445 - __main__ - INFO - ============================================================
+2026-01-24 05:51:58,445 - __main__ - INFO - STAGE 3: Analyzing data distribution
+2026-01-24 05:51:58,445 - __main__ - INFO - ============================================================
+2026-01-24 05:52:08,841 - __main__ - INFO - ✓ Data analysis completed
+2026-01-24 05:52:08,841 - __main__ - INFO - ============================================================
+2026-01-24 05:52:08,841 - __main__ - INFO - STAGE 4: Training DeepSleepNet model
+2026-01-24 05:52:08,841 - __main__ - INFO - ============================================================
+2026-01-24 05:52:08,847 - scripts.train - INFO - Using device: cpu
+2026-01-24 05:52:18,227 - scripts.train - INFO - Computed class weights: [1.28327884 2.58223684 0.4449753  1.49361239 1.09092714]
+2026-01-24 05:52:18,227 - scripts.train - INFO - Class distribution: [ 4282  2128 12349  3679  5037]
+2026-01-24 05:52:19,296 - scripts.train - INFO - Epoch 1/50
+2026-01-24 05:53:24,170 - scripts.train - INFO - Train Loss: 1.3139 | Acc: 38.82%
+2026-01-24 05:53:24,171 - scripts.train - INFO - Val Loss:   1.1412 | Acc: 39.69%
+2026-01-24 05:53:24,290 - scripts.train - INFO - ✓ New best model saved! Val Acc: 39.69%
+2026-01-24 05:53:24,290 - scripts.train - INFO - Epoch 2/50
+2026-01-24 05:54:31,251 - scripts.train - INFO - Train Loss: 1.1300 | Acc: 49.22%
+2026-01-24 05:54:31,251 - scripts.train - INFO - Val Loss:   0.9872 | Acc: 55.90%
+2026-01-24 05:54:31,357 - scripts.train - INFO - ✓ New best model saved! Val Acc: 55.90%
+2026-01-24 05:54:31,357 - scripts.train - INFO - Epoch 3/50
+2026-01-24 05:55:41,996 - scripts.train - INFO - Train Loss: 0.9287 | Acc: 62.73%
+2026-01-24 05:55:41,998 - scripts.train - INFO - Val Loss:   0.7895 | Acc: 74.23%
+2026-01-24 05:55:42,103 - scripts.train - INFO - ✓ New best model saved! Val Acc: 74.23%
+2026-01-24 05:55:42,103 - scripts.train - INFO - Epoch 4/50
+2026-01-24 05:56:49,369 - scripts.train - INFO - Train Loss: 0.7420 | Acc: 71.02%
+2026-01-24 05:56:49,370 - scripts.train - INFO - Val Loss:   0.8838 | Acc: 72.98%
+2026-01-24 05:56:49,370 - scripts.train - INFO - Epoch 5/50
+2026-01-24 05:57:55,379 - scripts.train - INFO - Train Loss: 0.7194 | Acc: 70.87%
+2026-01-24 05:57:55,380 - scripts.train - INFO - Val Loss:   0.6300 | Acc: 77.93%
+2026-01-24 05:57:55,485 - scripts.train - INFO - ✓ New best model saved! Val Acc: 77.93%
+2026-01-24 05:57:55,485 - scripts.train - INFO - Epoch 6/50
+2026-01-24 05:59:01,873 - scripts.train - INFO - Train Loss: 0.6429 | Acc: 75.27%
+2026-01-24 05:59:01,874 - scripts.train - INFO - Val Loss:   0.6568 | Acc: 79.67%
+2026-01-24 05:59:01,980 - scripts.train - INFO - ✓ New best model saved! Val Acc: 79.67%
+2026-01-24 05:59:01,980 - scripts.train - INFO - Epoch 7/50
+2026-01-24 06:00:08,490 - scripts.train - INFO - Train Loss: 0.6227 | Acc: 76.11%
+2026-01-24 06:00:08,491 - scripts.train - INFO - Val Loss:   0.6872 | Acc: 79.15%
+2026-01-24 06:00:08,491 - scripts.train - INFO - Epoch 8/50
+2026-01-24 06:01:15,414 - scripts.train - INFO - Train Loss: 0.5878 | Acc: 77.01%
+2026-01-24 06:01:15,416 - scripts.train - INFO - Val Loss:   0.7274 | Acc: 76.34%
+2026-01-24 06:01:15,416 - scripts.train - INFO - Epoch 9/50
+2026-01-24 06:02:22,084 - scripts.train - INFO - Train Loss: 0.5658 | Acc: 77.99%
+2026-01-24 06:02:22,085 - scripts.train - INFO - Val Loss:   0.5209 | Acc: 83.55%
+2026-01-24 06:02:22,181 - scripts.train - INFO - ✓ New best model saved! Val Acc: 83.55%
+2026-01-24 06:02:22,182 - scripts.train - INFO - Epoch 10/50
+2026-01-24 06:03:29,813 - scripts.train - INFO - Train Loss: 0.5491 | Acc: 78.72%
+2026-01-24 06:03:29,813 - scripts.train - INFO - Val Loss:   0.5445 | Acc: 83.15%
+2026-01-24 06:03:29,813 - scripts.train - INFO - Epoch 11/50
+2026-01-24 06:04:36,131 - scripts.train - INFO - Train Loss: 0.5649 | Acc: 78.95%
+2026-01-24 06:04:36,131 - scripts.train - INFO - Val Loss:   0.5129 | Acc: 83.55%
+2026-01-24 06:04:36,131 - scripts.train - INFO - Epoch 12/50
+2026-01-24 06:05:43,246 - scripts.train - INFO - Train Loss: 0.5191 | Acc: 80.44%
+2026-01-24 06:05:43,247 - scripts.train - INFO - Val Loss:   0.4997 | Acc: 85.28%
+2026-01-24 06:05:43,364 - scripts.train - INFO - ✓ New best model saved! Val Acc: 85.28%
+2026-01-24 06:05:43,364 - scripts.train - INFO - Epoch 13/50
+2026-01-24 06:06:50,145 - scripts.train - INFO - Train Loss: 0.5184 | Acc: 80.46%
+2026-01-24 06:06:50,146 - scripts.train - INFO - Val Loss:   0.4320 | Acc: 86.66%
+2026-01-24 06:06:50,244 - scripts.train - INFO - ✓ New best model saved! Val Acc: 86.66%
+2026-01-24 06:06:50,244 - scripts.train - INFO - Epoch 14/50
+2026-01-24 06:07:57,329 - scripts.train - INFO - Train Loss: 0.5153 | Acc: 80.12%
+2026-01-24 06:07:57,330 - scripts.train - INFO - Val Loss:   0.4420 | Acc: 86.14%
+2026-01-24 06:07:57,330 - scripts.train - INFO - Epoch 15/50
+2026-01-24 06:09:03,944 - scripts.train - INFO - Train Loss: 0.5062 | Acc: 79.64%
+2026-01-24 06:09:03,946 - scripts.train - INFO - Val Loss:   0.4781 | Acc: 85.35%
+2026-01-24 06:09:03,946 - scripts.train - INFO - Epoch 16/50
+2026-01-24 06:10:10,461 - scripts.train - INFO - Train Loss: 0.4744 | Acc: 81.87%
+2026-01-24 06:10:10,462 - scripts.train - INFO - Val Loss:   0.4815 | Acc: 85.70%
+2026-01-24 06:10:10,462 - scripts.train - INFO - Epoch 17/50
+2026-01-24 06:11:16,812 - scripts.train - INFO - Train Loss: 0.4855 | Acc: 80.71%
+2026-01-24 06:11:16,813 - scripts.train - INFO - Val Loss:   0.4364 | Acc: 87.05%
+2026-01-24 06:11:16,915 - scripts.train - INFO - ✓ New best model saved! Val Acc: 87.05%
+2026-01-24 06:11:16,916 - scripts.train - INFO - Epoch 18/50
+2026-01-24 06:12:23,577 - scripts.train - INFO - Train Loss: 0.4477 | Acc: 82.71%
+2026-01-24 06:12:23,578 - scripts.train - INFO - Val Loss:   0.5200 | Acc: 86.07%
+2026-01-24 06:12:23,578 - scripts.train - INFO - Epoch 19/50
+2026-01-24 06:13:30,066 - scripts.train - INFO - Train Loss: 0.4787 | Acc: 81.26%
+2026-01-24 06:13:30,067 - scripts.train - INFO - Val Loss:   0.5206 | Acc: 84.88%
+2026-01-24 06:13:30,067 - scripts.train - INFO - Epoch 20/50
+2026-01-24 06:14:36,925 - scripts.train - INFO - Train Loss: 0.4659 | Acc: 82.14%
+2026-01-24 06:14:36,926 - scripts.train - INFO - Val Loss:   0.5037 | Acc: 86.13%
+2026-01-24 06:14:36,926 - scripts.train - INFO - Epoch 21/50
+2026-01-24 06:15:43,505 - scripts.train - INFO - Learning rate reduced: 1.00e-04 -> 5.00e-05
+2026-01-24 06:15:43,506 - scripts.train - INFO - Train Loss: 0.4479 | Acc: 82.88%
+2026-01-24 06:15:43,506 - scripts.train - INFO - Val Loss:   0.4046 | Acc: 85.62%
+2026-01-24 06:15:43,506 - scripts.train - INFO - Epoch 22/50
+2026-01-24 06:16:50,294 - scripts.train - INFO - Train Loss: 0.4239 | Acc: 83.20%
+2026-01-24 06:16:50,295 - scripts.train - INFO - Val Loss:   0.5093 | Acc: 85.52%
+2026-01-24 06:16:50,295 - scripts.train - INFO - Epoch 23/50
+2026-01-24 06:17:58,257 - scripts.train - INFO - Train Loss: 0.4222 | Acc: 83.33%
+2026-01-24 06:17:58,259 - scripts.train - INFO - Val Loss:   0.4484 | Acc: 86.23%
+2026-01-24 06:17:58,259 - scripts.train - INFO - Epoch 24/50
+2026-01-24 06:19:04,979 - scripts.train - INFO - Train Loss: 0.4278 | Acc: 84.07%
+2026-01-24 06:19:04,980 - scripts.train - INFO - Val Loss:   0.5080 | Acc: 84.61%
+2026-01-24 06:19:04,980 - scripts.train - INFO - Early stopping triggered after 24 epochs
+2026-01-24 06:19:04,980 - scripts.train - INFO - Best validation accuracy: 87.05%
+2026-01-24 06:19:13,055 - scripts.train - INFO - Test Loss: 0.5446 | Test Acc: 79.02%
+2026-01-24 06:19:13,171 - scripts.train - INFO - Final model saved.
+2026-01-24 06:19:13,275 - __main__ - INFO - ✓ Model training completed
+2026-01-24 06:19:13,277 - __main__ - INFO - ============================================================
+2026-01-24 06:19:13,277 - __main__ - INFO - STAGE 5: Evaluating model on test set
+2026-01-24 06:19:13,277 - __main__ - INFO - ============================================================
+2026-01-24 06:19:19,271 - scripts.evaluate - INFO - Starting model evaluation
+2026-01-24 06:19:19,271 - scripts.evaluate - INFO - Loading model from: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet/checkpoints/deepsleepnet_model.pth
+2026-01-24 06:19:22,071 - scripts.evaluate - INFO - Running predictions on test set...
+2026-01-24 06:19:29,742 - scripts.evaluate - INFO - Overall Accuracy: 79.02%
+2026-01-24 06:19:29,742 - scripts.evaluate - INFO - Classification Report:
+2026-01-24 06:19:29,747 - scripts.evaluate - INFO - 
+              precision    recall  f1-score   support
+
+        Wake     0.9316    0.8469    0.8873      1496
+          N1     0.4654    0.5103    0.4868       435
+          N2     0.9508    0.6848    0.7962      2960
+          N3     0.6695    0.9583    0.7883      1080
+         REM     0.6790    0.9210    0.7817      1279
+
+    accuracy                         0.7902      7250
+   macro avg     0.7392    0.7843    0.7480      7250
+weighted avg     0.8278    0.7902    0.7927      7250
+
+2026-01-24 06:19:29,748 - scripts.evaluate - INFO - Confusion Matrix (Rows=True, Cols=Predicted):
+2026-01-24 06:19:29,749 - scripts.evaluate - INFO - 
+[[1267   81   15   29  104]
+ [  74  222   31    4  104]
+ [   8  109 2027  474  342]
+ [   1    3   34 1035    7]
+ [  10   62   25    4 1178]]
+2026-01-24 06:19:29,754 - __main__ - INFO - ✓ Model evaluation completed
+2026-01-24 06:19:29,754 - __main__ - INFO - ============================================================
+2026-01-24 06:19:29,754 - __main__ - INFO - STAGE 6: Generating visualization plots
+2026-01-24 06:19:29,754 - __main__ - INFO - ============================================================
+2026-01-24 06:19:40,793 - __main__ - INFO - ✓ Visualization completed
+2026-01-24 06:19:40,793 - __main__ - INFO - ============================================================
+2026-01-24 06:19:40,793 - __main__ - INFO - Pipeline completed successfully!
+2026-01-24 06:19:40,793 - __main__ - INFO - ============================================================
+2026-01-24 06:19:40,793 - __main__ - INFO - Results:
+2026-01-24 06:19:40,793 - __main__ - INFO -   - Model checkpoints: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet/checkpoints
+2026-01-24 06:19:40,793 - __main__ - INFO -   - Visualizations: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet/figures
+2026-01-24 06:19:40,793 - __main__ - INFO -   - Log file: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet/deepsleepnet.log
+2026-01-24 06:37:22,942 - __main__ - INFO - Starting DeepSleepNet pipeline
+2026-01-24 06:37:22,942 - __main__ - INFO - Project root: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet
+2026-01-24 06:37:22,943 - __main__ - INFO - Raw data exists. Skipping download.
+2026-01-24 06:37:22,943 - __main__ - INFO - Preprocessed data exists. Skipping preprocessing.
+2026-01-24 06:37:22,943 - __main__ - INFO - ============================================================
+2026-01-24 06:37:22,943 - __main__ - INFO - STAGE 3: Analyzing data distribution
+2026-01-24 06:37:22,943 - __main__ - INFO - ============================================================
+2026-01-24 06:37:29,671 - __main__ - INFO - ✓ Analysis completed
+2026-01-24 06:37:29,671 - __main__ - INFO - ============================================================
+2026-01-24 06:37:29,671 - __main__ - INFO - STAGE 4: Training model
+2026-01-24 06:37:29,671 - __main__ - INFO - ============================================================
+2026-01-24 06:37:29,678 - scripts.train - INFO - Using device: cpu
+2026-01-24 06:37:39,078 - scripts.train - INFO - Class weights: [1.28327884 2.58223684 0.4449753  1.49361239 1.09092714]
+2026-01-24 06:37:39,079 - scripts.train - INFO - Distribution: [ 4282  2128 12349  3679  5037]
+2026-01-24 06:37:40,146 - scripts.train - INFO - Epoch 1/50
+2026-01-24 06:38:44,236 - scripts.train - INFO - Train: Loss 1.3222 | Acc 35.48%
+2026-01-24 06:38:44,237 - scripts.train - INFO - Val:   Loss 1.0474 | Acc 53.72%
+2026-01-24 06:38:44,386 - scripts.train - INFO - Best model saved: 53.72%
+2026-01-24 06:38:44,386 - scripts.train - INFO - Epoch 2/50
+2026-01-24 06:40:00,604 - scripts.train - INFO - Train: Loss 1.0796 | Acc 51.95%
+2026-01-24 06:40:00,606 - scripts.train - INFO - Val:   Loss 0.8750 | Acc 61.52%
+2026-01-24 06:40:00,858 - scripts.train - INFO - Best model saved: 61.52%
+2026-01-24 06:40:00,858 - scripts.train - INFO - Epoch 3/50
+2026-01-24 06:41:36,477 - scripts.train - INFO - Train: Loss 0.8765 | Acc 67.36%
+2026-01-24 06:41:36,482 - scripts.train - INFO - Val:   Loss 0.7844 | Acc 70.57%
+2026-01-24 06:41:36,802 - scripts.train - INFO - Best model saved: 70.57%
+2026-01-24 06:41:36,802 - scripts.train - INFO - Epoch 4/50
+2026-01-24 06:42:56,266 - scripts.train - INFO - Train: Loss 0.7612 | Acc 69.71%
+2026-01-24 06:42:56,273 - scripts.train - INFO - Val:   Loss 0.7150 | Acc 74.19%
+2026-01-24 06:42:56,646 - scripts.train - INFO - Best model saved: 74.19%
+2026-01-24 06:42:56,648 - scripts.train - INFO - Epoch 5/50
+2026-01-24 06:44:05,837 - scripts.train - INFO - Train: Loss 0.7058 | Acc 72.42%
+2026-01-24 06:44:05,838 - scripts.train - INFO - Val:   Loss 0.6289 | Acc 77.07%
+2026-01-24 06:44:05,957 - scripts.train - INFO - Best model saved: 77.07%
+2026-01-24 06:44:05,957 - scripts.train - INFO - Epoch 6/50
+2026-01-24 06:45:13,885 - scripts.train - INFO - Train: Loss 0.6747 | Acc 73.75%
+2026-01-24 06:45:13,886 - scripts.train - INFO - Val:   Loss 0.6030 | Acc 78.10%
+2026-01-24 06:45:13,994 - scripts.train - INFO - Best model saved: 78.10%
+2026-01-24 06:45:13,994 - scripts.train - INFO - Epoch 7/50
+2026-01-24 06:46:23,354 - scripts.train - INFO - Train: Loss 0.6229 | Acc 75.96%
+2026-01-24 06:46:23,356 - scripts.train - INFO - Val:   Loss 0.7076 | Acc 74.07%
+2026-01-24 06:46:23,357 - scripts.train - INFO - Epoch 8/50
+2026-01-24 06:47:29,868 - scripts.train - INFO - Train: Loss 0.6160 | Acc 76.49%
+2026-01-24 06:47:29,870 - scripts.train - INFO - Val:   Loss 0.5711 | Acc 80.31%
+2026-01-24 06:47:29,987 - scripts.train - INFO - Best model saved: 80.31%
+2026-01-24 06:47:29,987 - scripts.train - INFO - Epoch 9/50
+2026-01-24 06:48:35,924 - scripts.train - INFO - Train: Loss 0.6041 | Acc 77.45%
+2026-01-24 06:48:35,926 - scripts.train - INFO - Val:   Loss 0.5150 | Acc 81.17%
+2026-01-24 06:48:36,027 - scripts.train - INFO - Best model saved: 81.17%
+2026-01-24 06:48:36,027 - scripts.train - INFO - Epoch 10/50
+2026-01-24 06:49:42,143 - scripts.train - INFO - Train: Loss 0.6123 | Acc 75.83%
+2026-01-24 06:49:42,145 - scripts.train - INFO - Val:   Loss 0.6195 | Acc 81.71%
+2026-01-24 06:49:42,242 - scripts.train - INFO - Best model saved: 81.71%
+2026-01-24 06:49:42,242 - scripts.train - INFO - Epoch 11/50
+2026-01-24 06:50:47,202 - scripts.train - INFO - Train: Loss 0.5357 | Acc 79.53%
+2026-01-24 06:50:47,203 - scripts.train - INFO - Val:   Loss 0.4333 | Acc 84.55%
+2026-01-24 06:50:47,306 - scripts.train - INFO - Best model saved: 84.55%
+2026-01-24 06:50:47,306 - scripts.train - INFO - Epoch 12/50
+2026-01-24 06:51:53,721 - scripts.train - INFO - Train: Loss 0.5466 | Acc 79.39%
+2026-01-24 06:51:53,722 - scripts.train - INFO - Val:   Loss 0.4691 | Acc 84.51%
+2026-01-24 06:51:53,722 - scripts.train - INFO - Epoch 13/50
+2026-01-24 06:52:59,219 - scripts.train - INFO - Train: Loss 0.5443 | Acc 79.27%
+2026-01-24 06:52:59,221 - scripts.train - INFO - Val:   Loss 0.4513 | Acc 84.13%
+2026-01-24 06:52:59,221 - scripts.train - INFO - Epoch 14/50
+2026-01-24 06:54:04,932 - scripts.train - INFO - Train: Loss 0.5260 | Acc 80.24%
+2026-01-24 06:54:04,933 - scripts.train - INFO - Val:   Loss 0.4879 | Acc 84.91%
+2026-01-24 06:54:05,039 - scripts.train - INFO - Best model saved: 84.91%
+2026-01-24 06:54:05,040 - scripts.train - INFO - Epoch 15/50
+2026-01-24 06:55:09,830 - scripts.train - INFO - Train: Loss 0.5079 | Acc 80.21%
+2026-01-24 06:55:09,832 - scripts.train - INFO - Val:   Loss 0.4078 | Acc 83.14%
+2026-01-24 06:55:09,832 - scripts.train - INFO - Epoch 16/50
+2026-01-24 06:56:15,077 - scripts.train - INFO - Train: Loss 0.5005 | Acc 81.51%
+2026-01-24 06:56:15,078 - scripts.train - INFO - Val:   Loss 0.4763 | Acc 85.29%
+2026-01-24 06:56:15,189 - scripts.train - INFO - Best model saved: 85.29%
+2026-01-24 06:56:15,190 - scripts.train - INFO - Epoch 17/50
+2026-01-24 06:57:20,436 - scripts.train - INFO - Train: Loss 0.4954 | Acc 81.24%
+2026-01-24 06:57:20,438 - scripts.train - INFO - Val:   Loss 0.4323 | Acc 85.95%
+2026-01-24 06:57:20,548 - scripts.train - INFO - Best model saved: 85.95%
+2026-01-24 06:57:20,548 - scripts.train - INFO - Epoch 18/50
+2026-01-24 06:58:26,034 - scripts.train - INFO - Train: Loss 0.4855 | Acc 81.65%
+2026-01-24 06:58:26,035 - scripts.train - INFO - Val:   Loss 0.4270 | Acc 85.98%
+2026-01-24 06:58:26,139 - scripts.train - INFO - Best model saved: 85.98%
+2026-01-24 06:58:26,139 - scripts.train - INFO - Epoch 19/50
+2026-01-24 06:59:31,312 - scripts.train - INFO - Train: Loss 0.4740 | Acc 81.79%
+2026-01-24 06:59:31,313 - scripts.train - INFO - Val:   Loss 0.4294 | Acc 85.19%
+2026-01-24 06:59:31,313 - scripts.train - INFO - Epoch 20/50
+2026-01-24 07:00:37,606 - scripts.train - INFO - Train: Loss 0.4863 | Acc 81.50%
+2026-01-24 07:00:37,606 - scripts.train - INFO - Val:   Loss 0.4455 | Acc 84.57%
+2026-01-24 07:00:37,606 - scripts.train - INFO - Epoch 21/50
+2026-01-24 07:01:42,888 - scripts.train - INFO - Train: Loss 0.4596 | Acc 81.98%
+2026-01-24 07:01:42,888 - scripts.train - INFO - Val:   Loss 0.3884 | Acc 86.26%
+2026-01-24 07:01:43,014 - scripts.train - INFO - Best model saved: 86.26%
+2026-01-24 07:01:43,015 - scripts.train - INFO - Epoch 22/50
+2026-01-24 07:02:47,763 - scripts.train - INFO - Train: Loss 0.4719 | Acc 81.87%
+2026-01-24 07:02:47,764 - scripts.train - INFO - Val:   Loss 0.3786 | Acc 85.58%
+2026-01-24 07:02:47,764 - scripts.train - INFO - Epoch 23/50
+2026-01-24 07:03:52,684 - scripts.train - INFO - Train: Loss 0.4448 | Acc 82.62%
+2026-01-24 07:03:52,685 - scripts.train - INFO - Val:   Loss 0.4482 | Acc 85.40%
+2026-01-24 07:03:52,685 - scripts.train - INFO - Epoch 24/50
+2026-01-24 07:04:57,763 - scripts.train - INFO - Train: Loss 0.4439 | Acc 82.78%
+2026-01-24 07:04:57,764 - scripts.train - INFO - Val:   Loss 0.3858 | Acc 84.70%
+2026-01-24 07:04:57,764 - scripts.train - INFO - Epoch 25/50
+2026-01-24 07:06:02,568 - scripts.train - INFO - LR: 1.00e-04 -> 5.00e-05
+2026-01-24 07:06:02,569 - scripts.train - INFO - Train: Loss 0.4422 | Acc 82.69%
+2026-01-24 07:06:02,569 - scripts.train - INFO - Val:   Loss 0.4207 | Acc 85.72%
+2026-01-24 07:06:02,569 - scripts.train - INFO - Epoch 26/50
+2026-01-24 07:20:06,880 - scripts.train - INFO - Train: Loss 0.4162 | Acc 83.55%
+2026-01-24 07:20:06,885 - scripts.train - INFO - Val:   Loss 0.4289 | Acc 85.96%
+2026-01-24 07:20:06,885 - scripts.train - INFO - Epoch 27/50
+2026-01-24 07:21:13,714 - scripts.train - INFO - Train: Loss 0.4107 | Acc 84.51%
+2026-01-24 07:21:13,716 - scripts.train - INFO - Val:   Loss 0.3964 | Acc 84.92%
+2026-01-24 07:21:13,716 - scripts.train - INFO - Epoch 28/50
+2026-01-24 07:22:18,578 - scripts.train - INFO - Train: Loss 0.4084 | Acc 83.73%
+2026-01-24 07:22:18,579 - scripts.train - INFO - Val:   Loss 0.4411 | Acc 85.49%
+2026-01-24 07:22:18,579 - scripts.train - INFO - Early stopping at epoch 28, best: 86.26%
+2026-01-24 07:22:26,508 - scripts.train - INFO - Test: Loss 0.5532 | Acc 75.64%
+2026-01-24 07:22:26,626 - scripts.train - INFO - Final model saved.
+2026-01-24 07:22:26,730 - __main__ - INFO - ✓ Training completed
+2026-01-24 07:22:26,731 - __main__ - INFO - ============================================================
+2026-01-24 07:22:26,731 - __main__ - INFO - STAGE 5: Evaluating model
+2026-01-24 07:22:26,731 - __main__ - INFO - ============================================================
+2026-01-24 07:22:32,573 - scripts.evaluate - INFO - Loading model: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet/checkpoints/deepsleepnet_model.pth
+2026-01-24 07:22:43,022 - scripts.evaluate - INFO - Accuracy: 75.64%
+2026-01-24 07:22:43,028 - scripts.evaluate - INFO -               precision    recall  f1-score   support
+
+        Wake     0.8966    0.8984    0.8975      1496
+          N1     0.3210    0.5563    0.4071       435
+          N2     0.9713    0.5841    0.7295      2960
+          N3     0.6968    0.9343    0.7983      1080
+         REM     0.6557    0.9070    0.7612      1279
+
+    accuracy                         0.7564      7250
+   macro avg     0.7083    0.7760    0.7187      7250
+weighted avg     0.8203    0.7564    0.7607      7250
+
+2026-01-24 07:22:43,030 - scripts.evaluate - INFO - Confusion matrix:
+[[1344   89    7   10   46]
+ [ 102  242   15    4   72]
+ [  29  312 1729  424  466]
+ [   6   20   20 1009   25]
+ [  18   91    9    1 1160]]
+2026-01-24 07:22:43,036 - __main__ - INFO - ✓ Evaluation completed
+2026-01-24 07:22:43,036 - __main__ - INFO - ============================================================
+2026-01-24 07:22:43,036 - __main__ - INFO - STAGE 6: Generating visualizations
+2026-01-24 07:22:43,036 - __main__ - INFO - ============================================================
+2026-01-24 07:22:54,200 - __main__ - INFO - ✓ Visualization completed
+2026-01-24 07:22:54,201 - __main__ - INFO - ============================================================
+2026-01-24 07:22:54,201 - __main__ - INFO - Pipeline completed!
+2026-01-24 07:22:54,201 - __main__ - INFO - ============================================================
+2026-01-24 07:22:54,201 - __main__ - INFO - Checkpoints: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet/checkpoints
+2026-01-24 07:22:54,201 - __main__ - INFO - Figures: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet/figures
+2026-01-24 07:22:54,201 - __main__ - INFO - Log: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet/deepsleepnet.log
+2026-01-24 11:17:03,719 - __main__ - INFO - Pipeline started
+2026-01-24 11:17:03,720 - __main__ - INFO - Raw data exists, skipping download
+2026-01-24 11:17:03,721 - __main__ - INFO - Preprocessed data exists, skipping preprocessing
+2026-01-24 11:17:03,721 - __main__ - INFO - Analysis started
+2026-01-24 11:17:11,426 - __main__ - INFO - Analysis completed
+2026-01-24 11:17:11,426 - __main__ - INFO - Training started
+2026-01-24 11:17:11,436 - scripts.train - INFO - Device: cpu
+2026-01-24 11:17:21,103 - scripts.train - INFO - Weights: [1.28327884 5.16447368 0.4449753  1.49361239 1.09092714]
+2026-01-24 11:17:21,105 - scripts.train - INFO - Distribution: [ 4282  2128 12349  3679  5037]
+2026-01-24 11:17:21,116 - scripts.train - INFO - Stage 1: Training CNN on single epochs
+2026-01-24 11:18:46,727 - __main__ - INFO - Pipeline started
+2026-01-24 11:18:46,728 - __main__ - INFO - Raw data exists, skipping download
+2026-01-24 11:18:46,729 - __main__ - INFO - Preprocessed data exists, skipping preprocessing
+2026-01-24 11:18:46,729 - __main__ - INFO - Analysis started
+2026-01-24 11:18:51,600 - __main__ - INFO - Analysis completed
+2026-01-24 11:18:51,600 - __main__ - INFO - Training started
+2026-01-24 11:18:51,608 - scripts.train - INFO - Device: cpu
+2026-01-24 11:19:01,788 - scripts.train - INFO - Weights: [1.28327884 5.16447368 0.4449753  1.49361239 1.09092714]
+2026-01-24 11:19:01,789 - scripts.train - INFO - Distribution: [ 4282  2128 12349  3679  5037]
+2026-01-24 11:19:01,801 - scripts.train - INFO - Stage 1: Training CNN on single epochs
+2026-01-24 11:19:02,601 - scripts.train - INFO - Stage 1 Epoch 1/20
+2026-01-24 11:20:48,575 - __main__ - INFO - Pipeline started
+2026-01-24 11:20:48,576 - __main__ - INFO - Raw data exists, skipping download
+2026-01-24 11:20:48,576 - __main__ - INFO - Preprocessed data exists, skipping preprocessing
+2026-01-24 11:20:48,576 - __main__ - INFO - Analysis started
+2026-01-24 11:20:53,529 - __main__ - INFO - Analysis completed
+2026-01-24 11:20:53,529 - __main__ - INFO - Training started
+2026-01-24 11:20:53,534 - scripts.train - INFO - Device: cpu
+2026-01-24 11:21:03,338 - scripts.train - INFO - Weights: [1.28327884 5.16447368 0.4449753  1.49361239 1.09092714]
+2026-01-24 11:21:03,338 - scripts.train - INFO - Distribution: [ 4282  2128 12349  3679  5037]
+2026-01-24 11:21:03,349 - scripts.train - INFO - Stage 1: Training CNN on single epochs
+2026-01-24 11:21:04,010 - scripts.train - INFO - Stage 1 Epoch 1/20
+2026-01-24 11:21:55,791 - scripts.train - INFO - Train loss: 1.7905, acc: 31.48%
+2026-01-24 11:21:55,792 - scripts.train - INFO - Val loss: 0.6009, acc: 46.93%
+2026-01-24 11:21:55,792 - scripts.train - INFO - Stage 1 Epoch 2/20
+2026-01-24 11:22:48,581 - scripts.train - INFO - Train loss: 0.8758, acc: 45.54%
+2026-01-24 11:22:48,581 - scripts.train - INFO - Val loss: 0.5050, acc: 53.61%
+2026-01-24 11:22:48,581 - scripts.train - INFO - Stage 1 Epoch 3/20
+2026-01-24 11:23:41,599 - scripts.train - INFO - Train loss: 0.7032, acc: 49.12%
+2026-01-24 11:23:41,600 - scripts.train - INFO - Val loss: 0.4005, acc: 56.79%
+2026-01-24 11:23:41,600 - scripts.train - INFO - Stage 1 Epoch 4/20
+2026-01-24 11:24:37,421 - scripts.train - INFO - Train loss: 0.6520, acc: 53.33%
+2026-01-24 11:24:37,423 - scripts.train - INFO - Val loss: 0.4137, acc: 72.19%
+2026-01-24 11:24:37,424 - scripts.train - INFO - Stage 1 Epoch 5/20
+2026-01-24 11:25:30,423 - scripts.train - INFO - Train loss: 0.6233, acc: 55.71%
+2026-01-24 11:25:30,424 - scripts.train - INFO - Val loss: 0.3569, acc: 73.52%
+2026-01-24 11:25:30,424 - scripts.train - INFO - Stage 1 Epoch 6/20
+2026-01-24 11:26:22,954 - scripts.train - INFO - Train loss: 0.5527, acc: 59.02%
+2026-01-24 11:26:22,956 - scripts.train - INFO - Val loss: 0.3569, acc: 78.78%
+2026-01-24 11:26:22,956 - scripts.train - INFO - Stage 1 Epoch 7/20
+2026-01-24 11:27:15,720 - scripts.train - INFO - Train loss: 0.5744, acc: 60.76%
+2026-01-24 11:27:15,721 - scripts.train - INFO - Val loss: 0.4371, acc: 79.14%
+2026-01-24 11:27:15,721 - scripts.train - INFO - Stage 1 Epoch 8/20
+2026-01-24 11:28:08,391 - scripts.train - INFO - Train loss: 0.4802, acc: 63.68%
+2026-01-24 11:28:08,392 - scripts.train - INFO - Val loss: 0.3850, acc: 74.02%
+2026-01-24 11:28:08,392 - scripts.train - INFO - Stage 1 Epoch 9/20
+2026-01-24 11:29:01,174 - scripts.train - INFO - Train loss: 0.4665, acc: 62.92%
+2026-01-24 11:29:01,175 - scripts.train - INFO - Val loss: 0.3465, acc: 77.50%
+2026-01-24 11:29:01,175 - scripts.train - INFO - Stage 1 Epoch 10/20
+2026-01-24 11:29:53,816 - scripts.train - INFO - Train loss: 0.4715, acc: 64.17%
+2026-01-24 11:29:53,817 - scripts.train - INFO - Val loss: 0.3420, acc: 71.85%
+2026-01-24 11:29:53,817 - scripts.train - INFO - Stage 1 Epoch 11/20
+2026-01-24 11:30:46,462 - scripts.train - INFO - LR reduced: 1.00e-03 -> 5.00e-04
+2026-01-24 11:30:46,462 - scripts.train - INFO - Train loss: 0.4771, acc: 63.03%
+2026-01-24 11:30:46,462 - scripts.train - INFO - Val loss: 0.3505, acc: 72.82%
+2026-01-24 11:30:46,463 - scripts.train - INFO - Stage 1 Epoch 12/20
+2026-01-24 11:31:39,847 - scripts.train - INFO - Train loss: 0.4389, acc: 65.43%
+2026-01-24 11:31:39,848 - scripts.train - INFO - Val loss: 0.3865, acc: 70.19%
+2026-01-24 11:31:39,848 - scripts.train - INFO - Stage 1 Epoch 13/20
+2026-01-24 11:32:32,671 - scripts.train - INFO - Train loss: 0.4147, acc: 65.99%
+2026-01-24 11:32:32,672 - scripts.train - INFO - Val loss: 0.3496, acc: 81.20%
+2026-01-24 11:32:32,672 - scripts.train - INFO - Stage 1 Epoch 14/20
+2026-01-24 11:33:25,262 - scripts.train - INFO - Train loss: 0.4032, acc: 66.06%
+2026-01-24 11:33:25,262 - scripts.train - INFO - Val loss: 0.3570, acc: 72.57%
+2026-01-24 11:33:25,262 - scripts.train - INFO - Stage 1 Epoch 15/20
+2026-01-24 11:34:17,845 - scripts.train - INFO - Train loss: 0.3970, acc: 67.02%
+2026-01-24 11:34:17,846 - scripts.train - INFO - Val loss: 0.3566, acc: 79.64%
+2026-01-24 11:34:17,846 - scripts.train - INFO - Stage 1 Epoch 16/20
+2026-01-24 11:35:10,681 - scripts.train - INFO - Train loss: 0.3848, acc: 68.23%
+2026-01-24 11:35:10,683 - scripts.train - INFO - Val loss: 0.3938, acc: 74.05%
+2026-01-24 11:35:10,683 - scripts.train - INFO - Stage 1 Epoch 17/20
+2026-01-24 11:36:03,331 - scripts.train - INFO - LR reduced: 5.00e-04 -> 2.50e-04
+2026-01-24 11:36:03,332 - scripts.train - INFO - Train loss: 0.3816, acc: 67.26%
+2026-01-24 11:36:03,332 - scripts.train - INFO - Val loss: 0.3379, acc: 76.09%
+2026-01-24 11:36:03,332 - scripts.train - INFO - Stage 1 Epoch 18/20
+2026-01-24 11:36:55,859 - scripts.train - INFO - Train loss: 0.3554, acc: 69.28%
+2026-01-24 11:36:55,860 - scripts.train - INFO - Val loss: 0.3419, acc: 77.53%
+2026-01-24 11:36:55,860 - scripts.train - INFO - Stage 1 Epoch 19/20
+2026-01-24 11:37:48,378 - scripts.train - INFO - Train loss: 0.3411, acc: 69.55%
+2026-01-24 11:37:48,380 - scripts.train - INFO - Val loss: 0.3595, acc: 81.12%
+2026-01-24 11:37:48,380 - scripts.train - INFO - Stage 1 Epoch 20/20
+2026-01-24 11:38:41,226 - scripts.train - INFO - Train loss: 0.3333, acc: 71.22%
+2026-01-24 11:38:41,227 - scripts.train - INFO - Val loss: 0.3592, acc: 77.04%
+2026-01-24 11:38:41,227 - scripts.train - INFO - Early stopping at epoch 20, best: 81.20%
+2026-01-24 11:38:41,227 - scripts.train - INFO - Stage 1 completed, best val acc: 81.20%
+2026-01-24 11:38:41,230 - scripts.train - INFO - Stage 2: Training LSTM with frozen CNN
+2026-01-24 11:38:41,243 - scripts.train - INFO - Stage 2 Epoch 1/30
+2026-01-24 11:39:31,274 - scripts.train - INFO - Train loss: 0.5749, acc: 50.81%
+2026-01-24 11:39:31,276 - scripts.train - INFO - Val loss: 0.2820, acc: 79.03%
+2026-01-24 11:39:31,565 - scripts.train - INFO - Best model saved: 79.03%
+2026-01-24 11:39:31,565 - scripts.train - INFO - Stage 2 Epoch 2/30
+2026-01-24 11:40:21,811 - scripts.train - INFO - Train loss: 0.3461, acc: 67.25%
+2026-01-24 11:40:21,813 - scripts.train - INFO - Val loss: 0.2846, acc: 82.20%
+2026-01-24 11:40:21,921 - scripts.train - INFO - Best model saved: 82.20%
+2026-01-24 11:40:21,921 - scripts.train - INFO - Stage 2 Epoch 3/30
+2026-01-24 11:41:11,751 - scripts.train - INFO - Train loss: 0.2999, acc: 71.40%
+2026-01-24 11:41:11,753 - scripts.train - INFO - Val loss: 0.2840, acc: 78.08%
+2026-01-24 11:41:11,753 - scripts.train - INFO - Stage 2 Epoch 4/30
+2026-01-24 11:42:01,104 - scripts.train - INFO - Train loss: 0.2624, acc: 74.03%
+2026-01-24 11:42:01,106 - scripts.train - INFO - Val loss: 0.2601, acc: 77.09%
+2026-01-24 11:42:01,106 - scripts.train - INFO - Stage 2 Epoch 5/30
+2026-01-24 11:42:50,408 - scripts.train - INFO - Train loss: 0.2511, acc: 74.49%
+2026-01-24 11:42:50,409 - scripts.train - INFO - Val loss: 0.2812, acc: 81.80%
+2026-01-24 11:42:50,409 - scripts.train - INFO - Stage 2 Epoch 6/30
+2026-01-24 11:43:39,806 - scripts.train - INFO - LR reduced: 1.00e-04 -> 5.00e-05
+2026-01-24 11:43:39,807 - scripts.train - INFO - Train loss: 0.2476, acc: 76.04%
+2026-01-24 11:43:39,807 - scripts.train - INFO - Val loss: 0.2459, acc: 77.99%
+2026-01-24 11:43:39,807 - scripts.train - INFO - Stage 2 Epoch 7/30
+2026-01-24 11:44:29,088 - scripts.train - INFO - Train loss: 0.2330, acc: 75.21%
+2026-01-24 11:44:29,089 - scripts.train - INFO - Val loss: 0.2703, acc: 77.52%
+2026-01-24 11:44:29,089 - scripts.train - INFO - Stage 2 Epoch 8/30
+2026-01-24 11:45:18,560 - scripts.train - INFO - Train loss: 0.2131, acc: 76.66%
+2026-01-24 11:45:18,561 - scripts.train - INFO - Val loss: 0.2576, acc: 83.11%
+2026-01-24 11:45:18,665 - scripts.train - INFO - Best model saved: 83.11%
+2026-01-24 11:45:18,665 - scripts.train - INFO - Stage 2 Epoch 9/30
+2026-01-24 11:46:08,127 - scripts.train - INFO - Train loss: 0.2156, acc: 76.52%
+2026-01-24 11:46:08,127 - scripts.train - INFO - Val loss: 0.2726, acc: 82.30%
+2026-01-24 11:46:08,127 - scripts.train - INFO - Stage 2 Epoch 10/30
+2026-01-24 11:46:57,686 - scripts.train - INFO - Train loss: 0.2087, acc: 77.94%
+2026-01-24 11:46:57,688 - scripts.train - INFO - Val loss: 0.2373, acc: 81.49%
+2026-01-24 11:46:57,688 - scripts.train - INFO - Stage 2 Epoch 11/30
+2026-01-24 11:47:47,125 - scripts.train - INFO - Train loss: 0.2131, acc: 76.38%
+2026-01-24 11:47:47,127 - scripts.train - INFO - Val loss: 0.2585, acc: 82.25%
+2026-01-24 11:47:47,127 - scripts.train - INFO - Stage 2 Epoch 12/30
+2026-01-24 11:48:39,196 - scripts.train - INFO - LR reduced: 5.00e-05 -> 2.50e-05
+2026-01-24 11:48:39,198 - scripts.train - INFO - Train loss: 0.2171, acc: 77.27%
+2026-01-24 11:48:39,198 - scripts.train - INFO - Val loss: 0.2420, acc: 80.97%
+2026-01-24 11:48:39,198 - scripts.train - INFO - Stage 2 Epoch 13/30
+2026-01-24 11:49:28,673 - scripts.train - INFO - Train loss: 0.1980, acc: 78.00%
+2026-01-24 11:49:28,673 - scripts.train - INFO - Val loss: 0.2455, acc: 81.53%
+2026-01-24 11:49:28,673 - scripts.train - INFO - Stage 2 Epoch 14/30
+2026-01-24 11:50:20,199 - scripts.train - INFO - Train loss: 0.1914, acc: 77.38%
+2026-01-24 11:50:20,200 - scripts.train - INFO - Val loss: 0.2448, acc: 82.35%
+2026-01-24 11:50:20,200 - scripts.train - INFO - Stage 2 Epoch 15/30
+2026-01-24 11:51:13,135 - scripts.train - INFO - Train loss: 0.1981, acc: 78.28%
+2026-01-24 11:51:13,137 - scripts.train - INFO - Val loss: 0.2398, acc: 80.64%
+2026-01-24 11:51:13,137 - scripts.train - INFO - Early stopping at epoch 15, best: 83.11%
+2026-01-24 11:51:21,898 - scripts.train - INFO - Test loss: 0.4299, acc: 72.61%
+2026-01-24 11:51:22,042 - scripts.train - INFO - Model saved
+2026-01-24 11:51:22,157 - __main__ - INFO - Training completed
+2026-01-24 11:51:22,157 - __main__ - INFO - Evaluation started
+2026-01-24 11:51:27,857 - scripts.evaluate - INFO - Loading model: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet/checkpoints/deepsleepnet_model.pth
+2026-01-24 11:51:38,682 - scripts.evaluate - INFO - Accuracy: 72.61%
+2026-01-24 11:51:38,687 - scripts.evaluate - INFO -               precision    recall  f1-score   support
+
+        Wake     0.9406    0.8262    0.8797      1496
+          N1     0.2749    0.6345    0.3836       435
+          N2     0.9623    0.5429    0.6942      2960
+          N3     0.5802    0.9611    0.7236      1080
+         REM     0.7515    0.8655    0.8045      1279
+
+    accuracy                         0.7261      7250
+   macro avg     0.7019    0.7660    0.6971      7250
+weighted avg     0.8225    0.7261    0.7377      7250
+
+2026-01-24 11:51:38,689 - scripts.evaluate - INFO - Confusion matrix:
+[[1236  181    6   25   48]
+ [  58  276   16    5   80]
+ [  11  384 1607  720  238]
+ [   3   14   25 1038    0]
+ [   6  149   16    1 1107]]
+2026-01-24 11:51:38,694 - __main__ - INFO - Evaluation completed
+2026-01-24 11:51:38,694 - __main__ - INFO - Visualization started
+2026-01-24 11:51:50,492 - __main__ - INFO - Visualization completed
+2026-01-24 11:51:50,493 - __main__ - INFO - Pipeline completed
+2026-01-24 12:09:03,093 - __main__ - INFO - Pipeline started
+2026-01-24 12:09:03,094 - __main__ - INFO - Raw data exists, skipping download
+2026-01-24 12:09:03,094 - __main__ - INFO - Preprocessed data exists, skipping preprocessing
+2026-01-24 12:09:03,094 - __main__ - INFO - Analysis started
+2026-01-24 12:09:09,866 - __main__ - INFO - Analysis completed
+2026-01-24 12:09:09,867 - __main__ - INFO - Training started
+2026-01-24 12:09:09,879 - scripts.train - INFO - Device: cpu
+2026-01-24 12:09:19,707 - scripts.train - INFO - Class weights: [1.28327884 2.58223684 0.4449753  1.49361239 1.09092714]
+2026-01-24 12:09:19,707 - scripts.train - INFO - Distribution: [ 4282  2128 12349  3679  5037]
+2026-01-24 12:09:19,719 - scripts.train - INFO - Stage 1: Training CNN on single epochs
+2026-01-24 12:09:20,719 - scripts.train - INFO - Stage 1 Epoch 1/20
+2026-01-24 12:10:16,202 - scripts.train - INFO - Train loss: 1.5940, acc: 43.83%
+2026-01-24 12:10:16,204 - scripts.train - INFO - Val loss: 2.2153, acc: 39.43%
+2026-01-24 12:10:16,204 - scripts.train - INFO - Stage 1 Epoch 2/20
+2026-01-24 12:11:09,004 - scripts.train - INFO - Train loss: 1.0594, acc: 60.44%
+2026-01-24 12:11:09,004 - scripts.train - INFO - Val loss: 0.5730, acc: 80.73%
+2026-01-24 12:11:09,004 - scripts.train - INFO - Stage 1 Epoch 3/20
+2026-01-24 12:12:01,320 - scripts.train - INFO - Train loss: 0.9299, acc: 67.15%
+2026-01-24 12:12:01,321 - scripts.train - INFO - Val loss: 1.2229, acc: 65.19%
+2026-01-24 12:12:01,321 - scripts.train - INFO - Stage 1 Epoch 4/20
+2026-01-24 12:12:54,249 - scripts.train - INFO - Train loss: 0.8231, acc: 69.28%
+2026-01-24 12:12:54,250 - scripts.train - INFO - Val loss: 0.6587, acc: 83.66%
+2026-01-24 12:12:54,250 - scripts.train - INFO - Stage 1 Epoch 5/20
+2026-01-24 12:13:48,769 - scripts.train - INFO - Train loss: 0.7537, acc: 71.56%
+2026-01-24 12:13:48,770 - scripts.train - INFO - Val loss: 0.5850, acc: 76.97%
+2026-01-24 12:13:48,770 - scripts.train - INFO - Stage 1 Epoch 6/20
+2026-01-24 12:14:42,265 - scripts.train - INFO - Train loss: 0.7440, acc: 71.99%
+2026-01-24 12:14:42,267 - scripts.train - INFO - Val loss: 0.5898, acc: 82.16%
+2026-01-24 12:14:42,267 - scripts.train - INFO - Stage 1 Epoch 7/20
+2026-01-24 12:15:34,789 - scripts.train - INFO - Train loss: 0.7212, acc: 73.26%
+2026-01-24 12:15:34,789 - scripts.train - INFO - Val loss: 0.7384, acc: 75.82%
+2026-01-24 12:15:34,789 - scripts.train - INFO - Stage 1 Epoch 8/20
+2026-01-24 12:16:27,637 - scripts.train - INFO - LR reduced: 1.00e-03 -> 5.00e-04
+2026-01-24 12:16:27,638 - scripts.train - INFO - Train loss: 0.6564, acc: 75.28%
+2026-01-24 12:16:27,638 - scripts.train - INFO - Val loss: 0.4972, acc: 82.29%
+2026-01-24 12:16:27,638 - scripts.train - INFO - Stage 1 Epoch 9/20
+2026-01-24 12:17:20,987 - scripts.train - INFO - Train loss: 0.6077, acc: 76.12%
+2026-01-24 12:17:20,988 - scripts.train - INFO - Val loss: 0.5510, acc: 81.47%
+2026-01-24 12:17:20,988 - scripts.train - INFO - Stage 1 Epoch 10/20
+2026-01-24 12:18:14,274 - scripts.train - INFO - Train loss: 0.6268, acc: 76.02%
+2026-01-24 12:18:14,275 - scripts.train - INFO - Val loss: 0.4797, acc: 85.38%
+2026-01-24 12:18:14,275 - scripts.train - INFO - Stage 1 Epoch 11/20
+2026-01-24 12:19:07,981 - scripts.train - INFO - Train loss: 0.5862, acc: 77.23%
+2026-01-24 12:19:07,981 - scripts.train - INFO - Val loss: 0.5127, acc: 83.18%
+2026-01-24 12:19:07,981 - scripts.train - INFO - Stage 1 Epoch 12/20
+2026-01-24 12:20:00,836 - scripts.train - INFO - Train loss: 0.5804, acc: 77.19%
+2026-01-24 12:20:00,837 - scripts.train - INFO - Val loss: 0.4889, acc: 84.91%
+2026-01-24 12:20:00,837 - scripts.train - INFO - Stage 1 Epoch 13/20
+2026-01-24 12:20:53,855 - scripts.train - INFO - Train loss: 0.5681, acc: 78.15%
+2026-01-24 12:20:53,855 - scripts.train - INFO - Val loss: 0.5037, acc: 86.38%
+2026-01-24 12:20:53,855 - scripts.train - INFO - Stage 1 Epoch 14/20
+2026-01-24 12:21:47,584 - scripts.train - INFO - Train loss: 0.5692, acc: 78.16%
+2026-01-24 12:21:47,586 - scripts.train - INFO - Val loss: 0.5389, acc: 83.58%
+2026-01-24 12:21:47,586 - scripts.train - INFO - Stage 1 Epoch 15/20
+2026-01-24 12:22:40,283 - scripts.train - INFO - Train loss: 0.5710, acc: 77.85%
+2026-01-24 12:22:40,284 - scripts.train - INFO - Val loss: 0.4765, acc: 85.83%
+2026-01-24 12:22:40,284 - scripts.train - INFO - Stage 1 Epoch 16/20
+2026-01-24 12:23:32,818 - scripts.train - INFO - Train loss: 0.5500, acc: 78.63%
+2026-01-24 12:23:32,819 - scripts.train - INFO - Val loss: 0.4613, acc: 86.05%
+2026-01-24 12:23:32,819 - scripts.train - INFO - Stage 1 Epoch 17/20
+2026-01-24 12:24:27,202 - scripts.train - INFO - LR reduced: 5.00e-04 -> 2.50e-04
+2026-01-24 12:24:27,203 - scripts.train - INFO - Train loss: 0.5445, acc: 78.99%
+2026-01-24 12:24:27,203 - scripts.train - INFO - Val loss: 0.5447, acc: 83.73%
+2026-01-24 12:24:27,203 - scripts.train - INFO - Stage 1 Epoch 18/20
+2026-01-24 12:25:20,244 - scripts.train - INFO - Train loss: 0.5183, acc: 79.77%
+2026-01-24 12:25:20,246 - scripts.train - INFO - Val loss: 0.5059, acc: 85.49%
+2026-01-24 12:25:20,246 - scripts.train - INFO - Stage 1 Epoch 19/20
+2026-01-24 12:26:18,737 - scripts.train - INFO - Train loss: 0.5114, acc: 80.49%
+2026-01-24 12:26:18,738 - scripts.train - INFO - Val loss: 0.4917, acc: 83.61%
+2026-01-24 12:26:18,738 - scripts.train - INFO - Stage 1 Epoch 20/20
+2026-01-24 12:27:11,899 - scripts.train - INFO - Train loss: 0.5151, acc: 80.19%
+2026-01-24 12:27:11,899 - scripts.train - INFO - Val loss: 0.4850, acc: 87.11%
+2026-01-24 12:27:11,899 - scripts.train - INFO - Stage 1 completed, best val acc: 87.11%
+2026-01-24 12:27:11,902 - scripts.train - INFO - Stage 2: Training LSTM with frozen CNN
+2026-01-24 12:27:11,911 - scripts.train - INFO - Stage 2 Epoch 1/30
+2026-01-24 12:28:02,974 - scripts.train - INFO - Train loss: 0.7788, acc: 74.81%
+2026-01-24 12:28:02,974 - scripts.train - INFO - Val loss: 0.4346, acc: 86.91%
+2026-01-24 12:28:03,393 - scripts.train - INFO - Best model saved: 86.91%
+2026-01-24 12:28:03,394 - scripts.train - INFO - Stage 2 Epoch 2/30
+2026-01-24 12:28:54,029 - scripts.train - INFO - Train loss: 0.4962, acc: 81.24%
+2026-01-24 12:28:54,030 - scripts.train - INFO - Val loss: 0.4730, acc: 85.25%
+2026-01-24 12:28:54,030 - scripts.train - INFO - Stage 2 Epoch 3/30
+2026-01-24 12:29:45,412 - scripts.train - INFO - Train loss: 0.4563, acc: 83.00%
+2026-01-24 12:29:45,413 - scripts.train - INFO - Val loss: 0.4089, acc: 86.50%
+2026-01-24 12:29:45,413 - scripts.train - INFO - Stage 2 Epoch 4/30
+2026-01-24 12:30:36,594 - scripts.train - INFO - Train loss: 0.4089, acc: 84.52%
+2026-01-24 12:30:36,594 - scripts.train - INFO - Val loss: 0.4084, acc: 87.91%
+2026-01-24 12:30:36,767 - scripts.train - INFO - Best model saved: 87.91%
+2026-01-24 12:30:36,768 - scripts.train - INFO - Stage 2 Epoch 5/30
+2026-01-24 12:31:28,430 - scripts.train - INFO - Train loss: 0.4380, acc: 83.14%
+2026-01-24 12:31:28,431 - scripts.train - INFO - Val loss: 0.4428, acc: 86.99%
+2026-01-24 12:31:28,431 - scripts.train - INFO - Stage 2 Epoch 6/30
+2026-01-24 12:32:19,123 - scripts.train - INFO - Train loss: 0.3997, acc: 84.46%
+2026-01-24 12:32:19,124 - scripts.train - INFO - Val loss: 0.3626, acc: 88.45%
+2026-01-24 12:32:19,359 - scripts.train - INFO - Best model saved: 88.45%
+2026-01-24 12:32:19,359 - scripts.train - INFO - Stage 2 Epoch 7/30
+2026-01-24 12:33:09,705 - scripts.train - INFO - Train loss: 0.3904, acc: 84.60%
+2026-01-24 12:33:09,706 - scripts.train - INFO - Val loss: 0.4013, acc: 87.38%
+2026-01-24 12:33:09,706 - scripts.train - INFO - Stage 2 Epoch 8/30
+2026-01-24 12:33:59,712 - scripts.train - INFO - Train loss: 0.3933, acc: 84.45%
+2026-01-24 12:33:59,713 - scripts.train - INFO - Val loss: 0.3501, acc: 88.36%
+2026-01-24 12:33:59,713 - scripts.train - INFO - Stage 2 Epoch 9/30
+2026-01-24 12:34:50,017 - scripts.train - INFO - Train loss: 0.3715, acc: 85.53%
+2026-01-24 12:34:50,019 - scripts.train - INFO - Val loss: 0.3362, acc: 89.25%
+2026-01-24 12:34:50,180 - scripts.train - INFO - Best model saved: 89.25%
+2026-01-24 12:34:50,181 - scripts.train - INFO - Stage 2 Epoch 10/30
+2026-01-24 12:35:40,651 - scripts.train - INFO - Train loss: 0.3824, acc: 85.04%
+2026-01-24 12:35:40,652 - scripts.train - INFO - Val loss: 0.4367, acc: 85.64%
+2026-01-24 12:35:40,652 - scripts.train - INFO - Stage 2 Epoch 11/30
+2026-01-24 12:36:31,110 - scripts.train - INFO - Train loss: 0.3617, acc: 85.71%
+2026-01-24 12:36:31,112 - scripts.train - INFO - Val loss: 0.3367, acc: 88.51%
+2026-01-24 12:36:31,112 - scripts.train - INFO - Stage 2 Epoch 12/30
+2026-01-24 12:37:20,885 - scripts.train - INFO - Train loss: 0.3644, acc: 84.86%
+2026-01-24 12:37:20,886 - scripts.train - INFO - Val loss: 0.3386, acc: 87.55%
+2026-01-24 12:37:20,886 - scripts.train - INFO - Stage 2 Epoch 13/30
+2026-01-24 12:38:10,539 - scripts.train - INFO - LR reduced: 1.00e-04 -> 5.00e-05
+2026-01-24 12:38:10,540 - scripts.train - INFO - Train loss: 0.3640, acc: 85.38%
+2026-01-24 12:38:10,540 - scripts.train - INFO - Val loss: 0.4090, acc: 86.93%
+2026-01-24 12:38:10,540 - scripts.train - INFO - Stage 2 Epoch 14/30
+2026-01-24 12:39:01,337 - scripts.train - INFO - Train loss: 0.3501, acc: 85.91%
+2026-01-24 12:39:01,339 - scripts.train - INFO - Val loss: 0.3781, acc: 87.60%
+2026-01-24 12:39:01,339 - scripts.train - INFO - Stage 2 Epoch 15/30
+2026-01-24 12:39:51,860 - scripts.train - INFO - Train loss: 0.3410, acc: 86.44%
+2026-01-24 12:39:51,861 - scripts.train - INFO - Val loss: 0.3750, acc: 87.69%
+2026-01-24 12:39:51,861 - scripts.train - INFO - Stage 2 Epoch 16/30
+2026-01-24 12:40:41,809 - scripts.train - INFO - Train loss: 0.3251, acc: 86.51%
+2026-01-24 12:40:41,810 - scripts.train - INFO - Val loss: 0.3927, acc: 87.64%
+2026-01-24 12:40:41,810 - scripts.train - INFO - Early stopping at epoch 16, best: 89.25%
+2026-01-24 12:40:50,033 - scripts.train - INFO - Test loss: 0.6253, acc: 77.48%
+2026-01-24 12:40:50,158 - scripts.train - INFO - Model saved
+2026-01-24 12:40:50,254 - __main__ - INFO - Training completed
+2026-01-24 12:40:50,254 - __main__ - INFO - Evaluation started
+2026-01-24 12:40:55,064 - scripts.evaluate - INFO - Loading model: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet/checkpoints/deepsleepnet_model.pth
+2026-01-24 12:41:05,846 - scripts.evaluate - INFO - Accuracy: 77.48%
+2026-01-24 12:41:05,852 - scripts.evaluate - INFO -               precision    recall  f1-score   support
+
+        Wake     0.9159    0.8369    0.8746      1496
+          N1     0.3581    0.4207    0.3869       435
+          N2     0.9553    0.6639    0.7833      2960
+          N3     0.6871    0.9352    0.7922      1080
+         REM     0.6542    0.9437    0.7727      1279
+
+    accuracy                         0.7748      7250
+   macro avg     0.7141    0.7601    0.7219      7250
+weighted avg     0.8182    0.7748    0.7778      7250
+
+2026-01-24 12:41:05,853 - scripts.evaluate - INFO - Confusion matrix:
+[[1252  106   16   14  108]
+ [  83  183   31    3  135]
+ [  14  159 1965  443  379]
+ [   7   11   36 1010   16]
+ [  11   52    9    0 1207]]
+2026-01-24 12:41:05,859 - __main__ - INFO - Evaluation completed
+2026-01-24 12:41:05,859 - __main__ - INFO - Visualization started
+2026-01-24 12:41:17,931 - __main__ - INFO - Visualization completed
+2026-01-24 12:41:17,932 - __main__ - INFO - Pipeline completed
+2026-01-24 12:45:21,251 - __main__ - INFO - Pipeline started
+2026-01-24 12:45:21,251 - __main__ - INFO - Raw data exists, skipping download
+2026-01-24 12:45:21,252 - __main__ - INFO - Preprocessed data exists, skipping preprocessing
+2026-01-24 12:45:21,252 - __main__ - INFO - Analysis started
+2026-01-24 12:45:26,327 - __main__ - INFO - Analysis completed
+2026-01-24 12:45:26,328 - __main__ - INFO - Training started
+2026-01-24 12:45:26,337 - scripts.train - INFO - Device: cpu
+2026-01-24 12:45:35,818 - scripts.train - INFO - Focal alpha: [1.2832788  5.1644735  0.44497532 1.4936124  1.6363907 ]
+2026-01-24 12:45:35,819 - scripts.train - INFO - Distribution: [ 4282  2128 12349  3679  5037]
+2026-01-24 12:45:35,829 - scripts.train - INFO - Stage 1: Training CNN on single epochs
+2026-01-24 12:45:36,512 - scripts.train - INFO - Stage 1 Epoch 1/20
+2026-01-24 12:46:28,785 - scripts.train - INFO - Train loss: 3.2317, acc: 24.35%
+2026-01-24 12:46:28,786 - scripts.train - INFO - Val loss: 1.5570, acc: 50.62%
+2026-01-24 12:46:28,786 - scripts.train - INFO - Stage 1 Epoch 2/20
+2026-01-24 12:47:21,471 - scripts.train - INFO - Train loss: 2.1806, acc: 32.70%
+2026-01-24 12:47:21,472 - scripts.train - INFO - Val loss: 1.6704, acc: 32.10%
+2026-01-24 12:47:21,472 - scripts.train - INFO - Stage 1 Epoch 3/20
+2026-01-24 12:48:14,366 - scripts.train - INFO - Train loss: 1.9444, acc: 34.94%
+2026-01-24 12:48:14,367 - scripts.train - INFO - Val loss: 1.9886, acc: 38.74%
+2026-01-24 12:48:14,367 - scripts.train - INFO - Stage 1 Epoch 4/20
+2026-01-24 12:49:07,909 - scripts.train - INFO - Train loss: 1.6783, acc: 36.26%
+2026-01-24 12:49:07,909 - scripts.train - INFO - Val loss: 1.1591, acc: 50.99%
+2026-01-24 12:49:07,909 - scripts.train - INFO - Stage 1 Epoch 5/20
+2026-01-24 12:50:03,936 - scripts.train - INFO - Train loss: 1.5677, acc: 37.24%
+2026-01-24 12:50:03,939 - scripts.train - INFO - Val loss: 1.0040, acc: 46.30%
+2026-01-24 12:50:03,939 - scripts.train - INFO - Stage 1 Epoch 6/20
+2026-01-24 12:50:57,375 - scripts.train - INFO - Train loss: 1.5029, acc: 38.17%
+2026-01-24 12:50:57,376 - scripts.train - INFO - Val loss: 1.1727, acc: 41.99%
+2026-01-24 12:50:57,376 - scripts.train - INFO - Stage 1 Epoch 7/20
+2026-01-24 12:51:51,056 - scripts.train - INFO - Train loss: 1.4434, acc: 40.10%
+2026-01-24 12:51:51,057 - scripts.train - INFO - Val loss: 1.0264, acc: 51.96%
+2026-01-24 12:51:51,057 - scripts.train - INFO - Stage 1 Epoch 8/20
+2026-01-24 12:52:45,586 - scripts.train - INFO - Train loss: 1.3450, acc: 44.87%
+2026-01-24 12:52:45,587 - scripts.train - INFO - Val loss: 1.1374, acc: 67.11%
+2026-01-24 12:52:45,587 - scripts.train - INFO - Stage 1 Epoch 9/20
+2026-01-24 12:53:38,469 - scripts.train - INFO - Train loss: 1.2726, acc: 46.91%
+2026-01-24 12:53:38,470 - scripts.train - INFO - Val loss: 1.0629, acc: 54.36%
+2026-01-24 12:53:38,470 - scripts.train - INFO - Stage 1 Epoch 10/20
+2026-01-24 12:54:31,598 - scripts.train - INFO - Train loss: 1.2154, acc: 50.08%
+2026-01-24 12:54:31,599 - scripts.train - INFO - Val loss: 0.9405, acc: 54.14%
+2026-01-24 12:54:31,599 - scripts.train - INFO - Stage 1 Epoch 11/20
+2026-01-24 12:55:24,600 - scripts.train - INFO - Train loss: 1.2035, acc: 48.61%
+2026-01-24 12:55:24,602 - scripts.train - INFO - Val loss: 1.1852, acc: 54.54%
+2026-01-24 12:55:24,602 - scripts.train - INFO - Stage 1 Epoch 12/20
+2026-01-24 12:56:17,613 - scripts.train - INFO - Train loss: 1.1247, acc: 50.88%
+2026-01-24 12:56:17,615 - scripts.train - INFO - Val loss: 1.0351, acc: 68.51%
+2026-01-24 12:56:17,615 - scripts.train - INFO - Stage 1 Epoch 13/20
+2026-01-24 12:57:11,219 - scripts.train - INFO - Train loss: 1.1653, acc: 50.01%
+2026-01-24 12:57:11,220 - scripts.train - INFO - Val loss: 1.0419, acc: 55.64%
+2026-01-24 12:57:11,220 - scripts.train - INFO - Stage 1 Epoch 14/20
+2026-01-24 12:58:04,342 - scripts.train - INFO - Train loss: 1.1761, acc: 50.46%
+2026-01-24 12:58:04,343 - scripts.train - INFO - Val loss: 1.2068, acc: 59.11%
+2026-01-24 12:58:04,343 - scripts.train - INFO - Stage 1 Epoch 15/20
+2026-01-24 12:58:57,330 - scripts.train - INFO - Train loss: 1.1415, acc: 51.62%
+2026-01-24 12:58:57,332 - scripts.train - INFO - Val loss: 1.3176, acc: 69.87%
+2026-01-24 12:58:57,332 - scripts.train - INFO - Stage 1 Epoch 16/20
+2026-01-24 12:59:50,572 - scripts.train - INFO - Train loss: 1.1162, acc: 51.56%
+2026-01-24 12:59:50,573 - scripts.train - INFO - Val loss: 1.2720, acc: 43.17%
+2026-01-24 12:59:50,573 - scripts.train - INFO - Stage 1 Epoch 17/20
+2026-01-24 13:00:43,491 - scripts.train - INFO - Train loss: 1.0943, acc: 53.18%
+2026-01-24 13:00:43,492 - scripts.train - INFO - Val loss: 1.0805, acc: 63.45%
+2026-01-24 13:00:43,492 - scripts.train - INFO - Stage 1 Epoch 18/20
+2026-01-24 13:01:36,428 - scripts.train - INFO - Train loss: 1.0259, acc: 53.79%
+2026-01-24 13:01:36,429 - scripts.train - INFO - Val loss: 1.1761, acc: 53.38%
+2026-01-24 13:01:36,430 - scripts.train - INFO - Stage 1 Epoch 19/20
+2026-01-24 13:02:29,275 - scripts.train - INFO - LR reduced: 1.00e-03 -> 5.00e-04
+2026-01-24 13:02:29,275 - scripts.train - INFO - Train loss: 1.0808, acc: 52.75%
+2026-01-24 13:02:29,275 - scripts.train - INFO - Val loss: 1.0767, acc: 61.07%
+2026-01-24 13:02:29,275 - scripts.train - INFO - Stage 1 Epoch 20/20
+2026-01-24 13:03:22,142 - scripts.train - INFO - Train loss: 0.9369, acc: 55.31%
+2026-01-24 13:03:22,143 - scripts.train - INFO - Val loss: 1.0270, acc: 62.63%
+2026-01-24 13:03:22,143 - scripts.train - INFO - Stage 1 completed, best val acc: 69.87%
+2026-01-24 13:03:22,146 - scripts.train - INFO - Stage 2: Training LSTM with frozen CNN
+2026-01-24 13:03:22,154 - scripts.train - INFO - Stage 2 Epoch 1/30
+2026-01-24 13:04:12,564 - scripts.train - INFO - Train loss: 1.6125, acc: 29.95%
+2026-01-24 13:04:12,565 - scripts.train - INFO - Val loss: 0.7398, acc: 49.71%
+2026-01-24 13:04:12,815 - scripts.train - INFO - Best model saved: 49.71%
+2026-01-24 13:04:12,815 - scripts.train - INFO - Stage 2 Epoch 2/30
+2026-01-24 13:05:03,164 - scripts.train - INFO - Train loss: 0.8657, acc: 43.61%
+2026-01-24 13:05:03,164 - scripts.train - INFO - Val loss: 0.8622, acc: 60.33%
+2026-01-24 13:05:03,297 - scripts.train - INFO - Best model saved: 60.33%
+2026-01-24 13:05:03,297 - scripts.train - INFO - Stage 2 Epoch 3/30
+2026-01-24 13:05:53,698 - scripts.train - INFO - Train loss: 0.7957, acc: 49.00%
+2026-01-24 13:05:53,700 - scripts.train - INFO - Val loss: 0.6777, acc: 64.77%
+2026-01-24 13:05:53,833 - scripts.train - INFO - Best model saved: 64.77%
+2026-01-24 13:05:53,833 - scripts.train - INFO - Stage 2 Epoch 4/30
+2026-01-24 13:06:45,333 - scripts.train - INFO - Train loss: 0.7400, acc: 50.32%
+2026-01-24 13:06:45,334 - scripts.train - INFO - Val loss: 0.6844, acc: 62.66%
+2026-01-24 13:06:45,334 - scripts.train - INFO - Stage 2 Epoch 5/30
+2026-01-24 13:07:35,650 - scripts.train - INFO - Train loss: 0.6626, acc: 52.21%
+2026-01-24 13:07:35,650 - scripts.train - INFO - Val loss: 0.6575, acc: 62.47%
+2026-01-24 13:07:35,650 - scripts.train - INFO - Stage 2 Epoch 6/30
+2026-01-24 13:08:25,531 - scripts.train - INFO - Train loss: 0.6229, acc: 57.18%
+2026-01-24 13:08:25,532 - scripts.train - INFO - Val loss: 0.7210, acc: 70.56%
+2026-01-24 13:08:25,655 - scripts.train - INFO - Best model saved: 70.56%
+2026-01-24 13:08:25,655 - scripts.train - INFO - Stage 2 Epoch 7/30
+2026-01-24 13:09:16,118 - scripts.train - INFO - Train loss: 0.5836, acc: 58.33%
+2026-01-24 13:09:16,119 - scripts.train - INFO - Val loss: 0.6104, acc: 68.16%
+2026-01-24 13:09:16,119 - scripts.train - INFO - Stage 2 Epoch 8/30
+2026-01-24 13:10:05,931 - scripts.train - INFO - Train loss: 0.5984, acc: 57.55%
+2026-01-24 13:10:05,932 - scripts.train - INFO - Val loss: 0.6965, acc: 71.45%
+2026-01-24 13:10:06,032 - scripts.train - INFO - Best model saved: 71.45%
+2026-01-24 13:10:06,032 - scripts.train - INFO - Stage 2 Epoch 9/30
+2026-01-24 13:10:58,695 - scripts.train - INFO - Train loss: 0.5504, acc: 58.40%
+2026-01-24 13:10:58,697 - scripts.train - INFO - Val loss: 0.6806, acc: 74.02%
+2026-01-24 13:10:58,812 - scripts.train - INFO - Best model saved: 74.02%
+2026-01-24 13:10:58,812 - scripts.train - INFO - Stage 2 Epoch 10/30
+2026-01-24 13:11:49,809 - scripts.train - INFO - Train loss: 0.5977, acc: 59.26%
+2026-01-24 13:11:49,810 - scripts.train - INFO - Val loss: 0.7126, acc: 73.67%
+2026-01-24 13:11:49,810 - scripts.train - INFO - Stage 2 Epoch 11/30
+2026-01-24 13:12:39,894 - scripts.train - INFO - Train loss: 0.5291, acc: 60.59%
+2026-01-24 13:12:39,895 - scripts.train - INFO - Val loss: 0.7548, acc: 70.47%
+2026-01-24 13:12:39,895 - scripts.train - INFO - Stage 2 Epoch 12/30
+2026-01-24 13:14:45,747 - scripts.train - INFO - Train loss: 0.5456, acc: 60.75%
+2026-01-24 13:14:45,752 - scripts.train - INFO - Val loss: 0.7082, acc: 72.10%
+2026-01-24 13:14:45,752 - scripts.train - INFO - Stage 2 Epoch 13/30
+2026-01-24 13:15:36,482 - scripts.train - INFO - Train loss: 0.5182, acc: 60.50%
+2026-01-24 13:15:36,483 - scripts.train - INFO - Val loss: 0.6983, acc: 74.69%
+2026-01-24 13:15:36,618 - scripts.train - INFO - Best model saved: 74.69%
+2026-01-24 13:15:36,618 - scripts.train - INFO - Stage 2 Epoch 14/30
+2026-01-24 13:16:27,242 - scripts.train - INFO - Train loss: 0.5118, acc: 62.69%
+2026-01-24 13:16:27,243 - scripts.train - INFO - Val loss: 0.8289, acc: 70.63%
+2026-01-24 13:16:27,243 - scripts.train - INFO - Stage 2 Epoch 15/30
+2026-01-24 13:17:18,101 - scripts.train - INFO - Train loss: 0.5171, acc: 61.45%
+2026-01-24 13:17:18,103 - scripts.train - INFO - Val loss: 0.7749, acc: 71.03%
+2026-01-24 13:17:18,103 - scripts.train - INFO - Stage 2 Epoch 16/30
+2026-01-24 13:18:07,969 - scripts.train - INFO - Train loss: 0.4859, acc: 62.11%
+2026-01-24 13:18:07,969 - scripts.train - INFO - Val loss: 0.6889, acc: 69.96%
+2026-01-24 13:18:07,969 - scripts.train - INFO - Stage 2 Epoch 17/30
+2026-01-24 13:18:58,149 - scripts.train - INFO - LR reduced: 1.00e-04 -> 5.00e-05
+2026-01-24 13:18:58,150 - scripts.train - INFO - Train loss: 0.4682, acc: 62.94%
+2026-01-24 13:18:58,150 - scripts.train - INFO - Val loss: 0.7433, acc: 69.75%
+2026-01-24 13:18:58,150 - scripts.train - INFO - Stage 2 Epoch 18/30
+2026-01-24 13:19:48,149 - scripts.train - INFO - Train loss: 0.4569, acc: 62.27%
+2026-01-24 13:19:48,150 - scripts.train - INFO - Val loss: 0.6332, acc: 72.31%
+2026-01-24 13:19:48,150 - scripts.train - INFO - Stage 2 Epoch 19/30
+2026-01-24 13:20:44,439 - scripts.train - INFO - Train loss: 0.4477, acc: 64.80%
+2026-01-24 13:20:44,441 - scripts.train - INFO - Val loss: 0.6936, acc: 72.45%
+2026-01-24 13:20:44,441 - scripts.train - INFO - Stage 2 Epoch 20/30
+2026-01-24 13:21:38,288 - scripts.train - INFO - Train loss: 0.4434, acc: 65.23%
+2026-01-24 13:21:38,290 - scripts.train - INFO - Val loss: 0.6870, acc: 72.46%
+2026-01-24 13:21:38,290 - scripts.train - INFO - Early stopping at epoch 20, best: 74.69%
+2026-01-24 13:21:46,398 - scripts.train - INFO - Test loss: 1.3387, acc: 58.41%
+2026-01-24 13:21:46,527 - scripts.train - INFO - Model saved
+2026-01-24 13:21:46,639 - __main__ - INFO - Training completed
+2026-01-24 13:21:46,639 - __main__ - INFO - Evaluation started
+2026-01-24 13:21:48,311 - scripts.evaluate - INFO - Loading model: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet/checkpoints/deepsleepnet_model.pth
+2026-01-24 13:21:59,033 - scripts.evaluate - INFO - Accuracy: 58.41%
+2026-01-24 13:21:59,039 - scripts.evaluate - INFO -               precision    recall  f1-score   support
+
+        Wake     1.0000    0.5281    0.6912      1496
+          N1     0.1909    0.7701    0.3059       435
+          N2     0.9938    0.3267    0.4917      2960
+          N3     0.5825    0.9417    0.7197      1080
+         REM     0.5670    0.8804    0.6897      1279
+
+    accuracy                         0.5841      7250
+   macro avg     0.6668    0.6894    0.5797      7250
+weighted avg     0.8103    0.5841    0.5906      7250
+
+2026-01-24 13:21:59,040 - scripts.evaluate - INFO - Confusion matrix:
+[[ 790  430    1   12  263]
+ [   0  335    1    3   96]
+ [   0  789  967  714  490]
+ [   0   48    4 1017   11]
+ [   0  153    0    0 1126]]
+2026-01-24 13:21:59,046 - __main__ - INFO - Evaluation completed
+2026-01-24 13:21:59,046 - __main__ - INFO - Visualization started
+2026-01-24 13:22:10,350 - __main__ - INFO - Visualization completed
+2026-01-24 13:22:10,350 - __main__ - INFO - Pipeline completed
+2026-01-24 14:21:46,729 - __main__ - INFO - Pipeline started
+2026-01-24 14:21:46,729 - __main__ - INFO - Root: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet
+2026-01-24 14:21:46,730 - __main__ - INFO - Raw data exists, skipping download
+2026-01-24 14:21:46,730 - __main__ - INFO - Preprocessed data exists, skipping preprocessing
+2026-01-24 14:21:46,730 - __main__ - INFO - Analysis started
+2026-01-24 14:21:52,437 - __main__ - INFO - Analysis completed
+2026-01-24 14:21:52,437 - __main__ - INFO - Training started
+2026-01-24 14:21:52,444 - scripts.train - INFO - Device: cpu
+2026-01-24 14:22:01,941 - scripts.train - INFO - Weights: [1.28327884 2.58223684 0.4449753  1.49361239 1.09092714]
+2026-01-24 14:22:01,942 - scripts.train - INFO - Distribution: [ 4282  2128 12349  3679  5037]
+2026-01-24 14:22:02,667 - scripts.train - INFO - Epoch 1/50
+2026-01-24 14:23:10,927 - scripts.train - INFO - Train loss: 1.3028, acc: 36.96%
+2026-01-24 14:23:10,928 - scripts.train - INFO - Val loss: 1.2902, acc: 37.06%
+2026-01-24 14:23:11,057 - scripts.train - INFO - Best model saved: 37.06%
+2026-01-24 14:23:11,057 - scripts.train - INFO - Epoch 2/50
+2026-01-24 14:24:24,730 - scripts.train - INFO - Train loss: 1.1283, acc: 50.81%
+2026-01-24 14:24:24,732 - scripts.train - INFO - Val loss: 0.8942, acc: 56.45%
+2026-01-24 14:24:24,958 - scripts.train - INFO - Best model saved: 56.45%
+2026-01-24 14:24:24,958 - scripts.train - INFO - Epoch 3/50
+2026-01-24 14:25:31,935 - scripts.train - INFO - Train loss: 0.8916, acc: 65.39%
+2026-01-24 14:25:31,936 - scripts.train - INFO - Val loss: 0.6877, acc: 71.20%
+2026-01-24 14:25:32,049 - scripts.train - INFO - Best model saved: 71.20%
+2026-01-24 14:25:32,049 - scripts.train - INFO - Epoch 4/50
+2026-01-24 14:26:38,226 - scripts.train - INFO - Train loss: 0.7275, acc: 70.78%
+2026-01-24 14:26:38,227 - scripts.train - INFO - Val loss: 0.9028, acc: 71.75%
+2026-01-24 14:26:38,336 - scripts.train - INFO - Best model saved: 71.75%
+2026-01-24 14:26:38,336 - scripts.train - INFO - Epoch 5/50
+2026-01-24 14:27:43,975 - scripts.train - INFO - Train loss: 0.7288, acc: 70.06%
+2026-01-24 14:27:43,976 - scripts.train - INFO - Val loss: 0.6091, acc: 76.88%
+2026-01-24 14:27:44,070 - scripts.train - INFO - Best model saved: 76.88%
+2026-01-24 14:27:44,070 - scripts.train - INFO - Epoch 6/50
+2026-01-24 14:28:51,499 - scripts.train - INFO - Train loss: 0.6516, acc: 74.50%
+2026-01-24 14:28:51,499 - scripts.train - INFO - Val loss: 0.7088, acc: 77.81%
+2026-01-24 14:28:51,625 - scripts.train - INFO - Best model saved: 77.81%
+2026-01-24 14:28:51,625 - scripts.train - INFO - Epoch 7/50
+2026-01-24 14:29:57,513 - scripts.train - INFO - Train loss: 0.6097, acc: 76.84%
+2026-01-24 14:29:57,515 - scripts.train - INFO - Val loss: 0.5969, acc: 80.70%
+2026-01-24 14:29:57,631 - scripts.train - INFO - Best model saved: 80.70%
+2026-01-24 14:29:57,631 - scripts.train - INFO - Epoch 8/50
+2026-01-24 14:31:03,607 - scripts.train - INFO - Train loss: 0.5809, acc: 77.40%
+2026-01-24 14:31:03,609 - scripts.train - INFO - Val loss: 0.6857, acc: 79.29%
+2026-01-24 14:31:03,609 - scripts.train - INFO - Epoch 9/50
+2026-01-24 14:35:37,469 - scripts.train - INFO - Train loss: 0.5681, acc: 77.47%
+2026-01-24 14:35:37,472 - scripts.train - INFO - Val loss: 0.4405, acc: 84.04%
+2026-01-24 14:35:37,596 - scripts.train - INFO - Best model saved: 84.04%
+2026-01-24 14:35:37,596 - scripts.train - INFO - Epoch 10/50
+2026-01-24 14:36:44,845 - scripts.train - INFO - Train loss: 0.5399, acc: 79.73%
+2026-01-24 14:36:44,846 - scripts.train - INFO - Val loss: 0.6195, acc: 81.10%
+2026-01-24 14:36:44,846 - scripts.train - INFO - Epoch 11/50
+2026-01-24 14:37:51,189 - scripts.train - INFO - Train loss: 0.5446, acc: 79.08%
+2026-01-24 14:37:51,190 - scripts.train - INFO - Val loss: 0.6072, acc: 82.22%
+2026-01-24 14:37:51,190 - scripts.train - INFO - Epoch 12/50
+2026-01-24 14:38:57,033 - scripts.train - INFO - Train loss: 0.5531, acc: 78.61%
+2026-01-24 14:38:57,034 - scripts.train - INFO - Val loss: 0.5928, acc: 83.43%
+2026-01-24 14:38:57,035 - scripts.train - INFO - Epoch 13/50
+2026-01-24 14:40:06,816 - scripts.train - INFO - LR reduced: 1.00e-04 -> 5.00e-05
+2026-01-24 14:40:06,817 - scripts.train - INFO - Train loss: 0.4950, acc: 81.46%
+2026-01-24 14:40:06,817 - scripts.train - INFO - Val loss: 0.7093, acc: 80.65%
+2026-01-24 14:40:06,817 - scripts.train - INFO - Epoch 14/50
+2026-01-24 14:41:16,509 - scripts.train - INFO - Train loss: 0.4987, acc: 80.59%
+2026-01-24 14:41:16,509 - scripts.train - INFO - Val loss: 0.5741, acc: 83.60%
+2026-01-24 14:41:16,509 - scripts.train - INFO - Epoch 15/50
+2026-01-24 14:42:25,778 - scripts.train - INFO - Train loss: 0.4833, acc: 81.95%
+2026-01-24 14:42:25,780 - scripts.train - INFO - Val loss: 0.5539, acc: 84.30%
+2026-01-24 14:42:25,890 - scripts.train - INFO - Best model saved: 84.30%
+2026-01-24 14:42:25,891 - scripts.train - INFO - Epoch 16/50
+2026-01-24 14:43:31,872 - scripts.train - INFO - Train loss: 0.4719, acc: 81.35%
+2026-01-24 14:43:31,874 - scripts.train - INFO - Val loss: 0.4089, acc: 86.56%
+2026-01-24 14:43:31,996 - scripts.train - INFO - Best model saved: 86.56%
+2026-01-24 14:43:31,997 - scripts.train - INFO - Epoch 17/50
+2026-01-24 14:44:37,941 - scripts.train - INFO - Train loss: 0.4790, acc: 81.44%
+2026-01-24 14:44:37,942 - scripts.train - INFO - Val loss: 0.5018, acc: 85.43%
+2026-01-24 14:44:37,942 - scripts.train - INFO - Epoch 18/50
+2026-01-24 14:45:44,073 - scripts.train - INFO - Train loss: 0.4712, acc: 82.16%
+2026-01-24 14:45:44,074 - scripts.train - INFO - Val loss: 0.3805, acc: 85.92%
+2026-01-24 14:45:44,074 - scripts.train - INFO - Epoch 19/50
+2026-01-24 15:28:17,709 - scripts.train - INFO - Train loss: 0.4689, acc: 81.40%
+2026-01-24 15:28:17,713 - scripts.train - INFO - Val loss: 0.5338, acc: 85.50%
+2026-01-24 15:28:17,713 - scripts.train - INFO - Epoch 20/50
+2026-01-24 15:29:23,709 - scripts.train - INFO - LR reduced: 5.00e-05 -> 2.50e-05
+2026-01-24 15:29:23,710 - scripts.train - INFO - Train loss: 0.4741, acc: 81.93%
+2026-01-24 15:29:23,710 - scripts.train - INFO - Val loss: 0.6164, acc: 84.42%
+2026-01-24 15:29:23,710 - scripts.train - INFO - Epoch 21/50
+2026-01-24 15:30:29,511 - scripts.train - INFO - Train loss: 0.4377, acc: 82.92%
+2026-01-24 15:30:29,513 - scripts.train - INFO - Val loss: 0.4765, acc: 86.13%
+2026-01-24 15:30:29,513 - scripts.train - INFO - Epoch 22/50
+2026-01-24 15:31:35,383 - scripts.train - INFO - Train loss: 0.4188, acc: 83.08%
+2026-01-24 15:31:35,385 - scripts.train - INFO - Val loss: 0.4393, acc: 86.44%
+2026-01-24 15:31:35,385 - scripts.train - INFO - Epoch 23/50
+2026-01-24 15:32:40,293 - scripts.train - INFO - Train loss: 0.4541, acc: 83.03%
+2026-01-24 15:32:40,295 - scripts.train - INFO - Val loss: 0.4695, acc: 85.96%
+2026-01-24 15:32:40,295 - scripts.train - INFO - Early stopping at epoch 23, best: 86.56%
+2026-01-24 15:32:48,138 - scripts.train - INFO - Test loss: 0.5646, acc: 77.48%
+2026-01-24 15:32:48,264 - scripts.train - INFO - Model saved
+2026-01-24 15:32:48,377 - __main__ - INFO - Training completed
+2026-01-24 15:32:48,378 - __main__ - INFO - Evaluation started
+2026-01-24 15:32:49,946 - scripts.evaluate - INFO - Loading model: /Users/anastasiia/Desktop/PythonProject/DeepSleepNet/checkpoints/deepsleepnet_model.pth
+2026-01-24 15:33:00,229 - scripts.evaluate - INFO - Accuracy: 77.48%
+2026-01-24 15:33:00,235 - scripts.evaluate - INFO -               precision    recall  f1-score   support
+
+        Wake     0.8906    0.8977    0.8941      1496
+          N1     0.3578    0.5609    0.4369       435
+          N2     0.9437    0.6571    0.7747      2960
+          N3     0.8003    0.8796    0.8381      1080
+         REM     0.6264    0.8874    0.7344      1279
+
+    accuracy                         0.7748      7250
+   macro avg     0.7238    0.7766    0.7357      7250
+weighted avg     0.8203    0.7748    0.7814      7250
+
+2026-01-24 15:33:00,236 - scripts.evaluate - INFO - Confusion matrix:
+[[1343  100   10    7   36]
+ [ 101  244   25    1   64]
+ [  34  213 1945  229  539]
+ [  14   15   63  950   38]
+ [  16  110   18    0 1135]]
+2026-01-24 15:33:00,240 - __main__ - INFO - Evaluation completed
+2026-01-24 15:33:00,240 - __main__ - INFO - Visualization started
+2026-01-24 15:33:11,259 - __main__ - INFO - Visualization completed
+2026-01-24 15:33:11,259 - __main__ - INFO - Pipeline completed

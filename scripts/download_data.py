@@ -92,7 +92,7 @@ FILENAMES = [
 
 
 def main():
-    # Ensure the output directory exists
+    # ensure the output directory exists
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     for filename in FILENAMES:
@@ -123,7 +123,7 @@ def main():
         except requests.exceptions.RequestException as e:
             tqdm.write(f"I have an error downloading {filename}: {e}")
 
-    print("\nAll downloads finished!")
+    print("\ndownloads finished")
 
 
 if __name__ == "__main__":
