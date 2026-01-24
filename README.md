@@ -403,7 +403,7 @@ python scripts/train.py
 - Best model: `checkpoints/deepsleepnet_best_model.pth`
 - Final model: `checkpoints/deepsleepnet_model.pth`
 
-**Training Time**: ~2-4 hours on CPU, ~30-60 minutes on GPU
+**Training Time**: ~1 hours on CPU, ~30 minutes on GPU
 
 **Features**:
 - ✅ Automatic class weight computation
