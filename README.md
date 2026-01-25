@@ -166,59 +166,6 @@ pip install -e .
 python -c "from preprocessing import compute_class_weights; from models import DeepSleepNet; print('OK')"
 ```
 
-### Installation Troubleshooting
-
-<details>
-<summary><b>PyTorch Installation Issues</b></summary>
-
-If PyTorch installation fails, install it separately from the official source:
-
-```bash
-# For CUDA (check your CUDA version first)
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
-# For CPU only
-pip install torch torchvision torchaudio
-
-# For Apple Silicon (M1/M2)
-pip install torch torchvision torchaudio
-```
-</details>
-
-<details>
-<summary><b>MNE Installation Issues</b></summary>
-
-MNE may require additional system libraries. Install system dependencies first:
-
-**Ubuntu/Debian**:
-```bash
-sudo apt-get install libhdf5-dev libnetcdf-dev
-```
-
-**macOS** (using Homebrew):
-```bash
-brew install hdf5 netcdf
-```
-
-Then retry: `pip install mne`
-</details>
-
-<details>
-<summary><b>Virtual Environment Issues</b></summary>
-
-If activation fails, try:
-```bash
-# On Linux/macOS
-source .venv/bin/activate
-
-# On Windows PowerShell
-.venv\Scripts\Activate.ps1
-
-# On Windows Command Prompt
-.venv\Scripts\activate.bat
-```
-</details>
-
 ---
 
 ## 🎯 Quick Start
