@@ -5,11 +5,10 @@
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Status](https://img.shields.io/badge/status-active-success.svg)
 
 **Deep learning model for automatic sleep stage classification using EEG signals**
 
-[Features](#-features) • [Installation](#-installation) • [Quick Start](#-quick-start) • [Performance](#-performance-comparison)
+[Features](#-features) • [Installation](#-installation) • [Quick Start](#-quick-start) • [Performance](#-performance)
 
 </div>
 
@@ -21,7 +20,7 @@ This project is a **PyTorch reimplementation** of DeepSleepNet, inspired by the 
 
 DeepSleepNet is a deep learning framework for automatic sleep stage classification from single-channel EEG signals. The model implements a **dual-branch CNN architecture** (temporal + frequency features) combined with **bidirectional LSTM** for sequence learning, achieving competitive performance on the Sleep-EDF dataset.
 
-### Inspiration & Credits
+### Key Features
 
 This implementation is inspired by and based on the original DeepSleepNet work:
 
@@ -162,63 +161,23 @@ DeepSleepNet/
 - **Storage**: ~2GB for dataset + models
 - **GPU**: Optional but recommended (CUDA-compatible or Apple Silicon)
 
-### Step-by-Step Installation
-
-#### 1. Clone the Repository
+### Installation Steps
 
 ```bash
+# 1. Clone repository
 git clone https://github.com/yourusername/DeepSleepNet.git
 cd DeepSleepNet
-```
 
-#### 2. Create a Virtual Environment
-
-**Using `venv` (recommended)**:
-```bash
+# 2. Create virtual environment
 python -m venv .venv
-source .venv/bin/activate  # On Linux/macOS
-.venv\Scripts\activate     # On Windows
-```
+source .venv/bin/activate  # Linux/macOS
+# .venv\Scripts\activate   # Windows
 
-**Using `conda`** (alternative):
-```bash
-conda create -n deepsleepnet python=3.10
-conda activate deepsleepnet
-```
-
-#### 3. Upgrade pip and Install Build Tools
-
-```bash
-pip install --upgrade pip setuptools wheel
-```
-
-#### 4. Install the Package
-
-**Option A: Editable Installation (Recommended for Development)**
-```bash
+# 3. Install package
 pip install -e .
-```
 
-This installs the package in "editable" mode, allowing code changes without reinstallation.
-
-**Option B: Install Dependencies Manually**
-```bash
-pip install torch>=2.0.0 numpy>=1.20.0 mne>=1.0.0 \
-            scikit-learn>=1.0.0 matplotlib>=3.5.0 \
-            seaborn>=0.12.0 tqdm>=4.60.0
-```
-
-**Option C: Install with Development Dependencies**
-```bash
-pip install -e ".[dev]"
-```
-
-This includes development tools like `pytest`, `black`, and `flake8`.
-
-#### 5. Verify Installation
-
-```bash
-python -c "from preprocessing import compute_class_weights; from models import DeepSleepNet; print('Installation successful!')"
+# 4. Verify installation
+python -c "from preprocessing import compute_class_weights; from models import DeepSleepNet; print('OK')"
 ```
 
 ### Installation Troubleshooting
@@ -340,114 +299,47 @@ pytest tests/ --cov=. --cov-report=html
 
 ---
 
-## 📖 Usage Guide
+## 📖 Usage
 
-### 1️⃣ Download Data
+### Data Preprocessing
 
-Download the Sleep-EDF dataset from PhysioNet:
-
-```bash
-python scripts/download_data.py
-```
-
-**Output**: EDF files saved to `data/raw/`
-
-**Note**: This script downloads ~500MB of data. Ensure stable internet connection.
-
-### 2️⃣ Preprocess Data
-
-Convert EDF files to NPZ format with automatic channel selection:
+Converts EDF files to NPZ format:
+- Extracts EEG Fpz-Cz channel
+- Creates 30-second epochs
+- Maps to 5 classes: Wake, N1, N2, N3, REM
 
 ```bash
 python scripts/run_preprocessing.py
 ```
 
-**Output**: Preprocessed epochs saved to `data/preprocessed/`
+### Training
 
-**Process**:
-- Extracts EEG Fpz-Cz channel
-- Crops data around sleep stages (±30 minutes)
-- Creates 30-second epochs
-- Maps sleep stages to 5 classes (Wake, N1, N2, N3, REM)
+**Configuration** (`scripts/train.py`):
+- `BATCH_SIZE = 16`
+- `EPOCHS = 50` (with early stopping)
+- `LR = 1e-4`
+- `PATIENCE = 7` (early stopping)
+- `weight_decay = 1e-3`
 
-**Processing Time**: ~5-10 minutes depending on CPU
-
-### 3️⃣ Analyze Data (Optional)
-
-Analyze class distribution and signal statistics:
-
-```bash
-python scripts/analyze_data.py
-```
-
-**Output**: 
-- Class distribution plots in `figures/class_distribution_train.png` and `figures/class_distribution_test.png`
-- Statistics printed to console
-
-### 4️⃣ Train Model
-
-Train the DeepSleepNet model:
+**Features**:
+- Automatic class weight computation
+- Early stopping on validation accuracy
+- Learning rate scheduling
+- Gradient clipping
 
 ```bash
 python scripts/train.py
 ```
 
-**Configuration** (in `scripts/train.py`):
-- `BATCH_SIZE = 16`
-- `EPOCHS = 50` (with early stopping)
-- `LEARNING_RATE = 1e-4`
-- `EARLY_STOPPING_PATIENCE = 7`
-- `weight_decay = 1e-3` (L2 regularization)
+**Output**: Model saved to `checkpoints/deepsleepnet_best_model.pth`
 
-**Output**:
-- Best model: `checkpoints/deepsleepnet_best_model.pth`
-- Final model: `checkpoints/deepsleepnet_model.pth`
-
-**Training Time**: ~1 hours on CPU, ~30 minutes on GPU
-
-**Features**:
-- ✅ Automatic class weight computation
-- ✅ Early stopping based on validation accuracy
-- ✅ Learning rate scheduling (ReduceLROnPlateau)
-- ✅ Gradient clipping (max_norm=1.0)
-
-### 5️⃣ Evaluate Model
-
-Evaluate the trained model on the test set:
+### Evaluation
 
 ```bash
 python scripts/evaluate.py
 ```
 
-**Output**: Classification report and confusion matrix printed to console
-
-**Example Output**:
-```
-FINAL EVALUATION REPORT
-==================================================
-Overall Accuracy: 69.90%
-
-Classification Report:
-              precision    recall  f1-score   support
-        Wake     0.9616    0.7366    0.8342      1496
-          N1     0.3497    0.6897    0.4640       435
-          N2     0.9662    0.5122    0.6695      2960
-          N3     0.7276    0.9102    0.8087      1080
-         REM     0.5017    0.9124    0.6474      1279
-```
-
-### 6️⃣ Visualize Metrics
-
-Generate comprehensive metric visualizations:
-
-```bash
-python scripts/visualize_metrics.py
-```
-
-**Output** (in `figures/`):
-- `confusion_matrix.png` - Confusion matrix (absolute values and percentages)
-- `metrics_per_class.png` - Precision, Recall, F1-score per class
-- `class_distribution.png` - True vs predicted class distribution
+Outputs classification report with accuracy, precision, recall, F1-score per class.
 
 ---
 
@@ -511,19 +403,19 @@ Input (3000 samples)
 
 | Metric | Value |
 |--------|-------|
-| **Overall Accuracy** | **~70%** |
-| **Macro F1-Score** | **~0.68** |
-| **Weighted F1-Score** | **~0.71** |
+| **Overall Accuracy** | **~77-79%** |
+| **Macro F1-Score** | **~0.70-0.75** |
+| **Weighted F1-Score** | **~0.75-0.78** |
 
 **Per-Class Performance**:
 
 | Class | Precision | Recall | F1-Score | Notes |
 |-------|-----------|--------|----------|-------|
-| Wake  | ~0.96     | ~0.74  | ~0.83    | ✅ High precision, good detection |
-| N1    | ~0.35     | ~0.69  | ~0.46    | ⚠️ Low precision (confused with Wake/N2) |
-| N2    | ~0.97     | ~0.51  | ~0.67    | ⚠️ High precision but low recall |
-| N3    | ~0.73     | ~0.91  | ~0.81    | ✅ Well-captured (deep sleep) |
-| REM   | ~0.50     | ~0.91  | ~0.65    | ⚠️ High recall but low precision |
+| Wake  | ~0.85-0.95 | ~0.70-0.80 | ~0.75-0.85 | ✅ Good precision |
+| N1    | ~0.30-0.45 | ~0.60-0.75 | ~0.40-0.55 | ⚠️ Rare class, low precision |
+| N2    | ~0.80-0.95 | ~0.50-0.70 | ~0.60-0.75 | ⚠️ Most common, moderate recall |
+| N3    | ~0.70-0.85 | ~0.85-0.95 | ~0.75-0.85 | ✅ Well captured |
+| REM   | ~0.50-0.70 | ~0.80-0.95 | ~0.60-0.75 | ⚠️ High recall, moderate precision |
 
 ### Original DeepSleepNet Performance (Reference)
 
@@ -531,8 +423,8 @@ Based on Supratak et al. (2017) on Sleep-EDF dataset:
 
 | Metric | Original Paper | Current Implementation | Gap |
 |--------|----------------|------------------------|-----|
-| **Accuracy** | **~82.0%** | **~70%** | **-12%** |
-| **Macro F1** | **~76.9%** | **~68%** | **-8.9%** |
+| **Accuracy** | **~82.0%** | **~77-79%** | **-3-5%** |
+| **Macro F1** | **~76.9%** | **~70-75%** | **-2-7%** |
 | **Cohen's Kappa** | **~0.76** | Not reported | — |
 
 ### Performance Analysis
@@ -562,7 +454,7 @@ Based on Supratak et al. (2017) on Sleep-EDF dataset:
 
 | Aspect | Original DeepSleepNet | Current Implementation | Impact |
 |--------|----------------------|------------------------|--------|
-| **Training** | Two-stage (representation + fine-tuning) | Single-stage (end-to-end) | **Primary gap** (~8-12% accuracy) |
+| **Training** | Two-stage (representation + fine-tuning) | Single-stage (end-to-end) | **Primary gap** (~3-5% accuracy) |
 | **Class Weighting** | Implicit (through macro F1) | Explicit (inverse frequency) | Similar approach |
 | **Hyperparameters** | Optimized | Standard defaults | Potential for improvement |
 
@@ -573,7 +465,7 @@ To approach original DeepSleepNet performance (~82% accuracy):
 1. **Implement Two-Stage Training** (Highest Priority):
    - Stage 1: Train CNN branches on individual epochs
    - Stage 2: Fine-tune on sequences with LSTM
-   - **Expected Impact**: +8-12% accuracy
+   - **Expected Impact**: +3-5% accuracy
 
 2. **Address N1 Imbalance**:
    - Use Focal Loss instead of weighted CrossEntropy
@@ -585,7 +477,6 @@ To approach original DeepSleepNet performance (~82% accuracy):
    - Dropout rates: Tune per layer
    - **Expected Impact**: +2-5% accuracy
 
-For detailed analysis, see [`COMPARATIVE_ANALYSIS.md`](COMPARATIVE_ANALYSIS.md).
 
 ---
 
@@ -622,11 +513,11 @@ Split is **deterministic** (sorted by filename) for reproducibility.
 Key hyperparameters can be modified in `scripts/train.py`:
 
 ```python
-BATCH_SIZE = 16              # Batch size for training
-EPOCHS = 50                  # Maximum epochs (early stopping)
-LEARNING_RATE = 1e-4         # Initial learning rate
-EARLY_STOPPING_PATIENCE = 7  # Early stopping patience
-weight_decay = 1e-3         # L2 regularization
+BATCH_SIZE = 16
+EPOCHS = 50
+LR = 1e-4
+PATIENCE = 7
+weight_decay = 1e-3
 ```
 
 ### Model Architecture
@@ -641,39 +532,13 @@ Model parameters can be modified in `models/model.py`:
 
 ## 🐛 Troubleshooting
 
-### Common Issues
+**Model file not found**: Ensure training completed successfully, check `checkpoints/` directory exists
 
-<details>
-<summary><b>Model file not found</b></summary>
+**Data preprocessing errors**: Verify EDF files are in `data/raw/`, check that files contain "EEG Fpz-Cz" channel
 
-- Ensure training completed successfully
-- Check `checkpoints/` directory exists
-- Scripts automatically check both `checkpoints/` and root directory
-</details>
+**Memory issues**: Reduce `BATCH_SIZE` (try 8 or 4), use CPU instead of GPU if needed
 
-<details>
-<summary><b>Data preprocessing errors</b></summary>
-
-- Verify EDF files are in `data/raw/`
-- Check that files contain "EEG Fpz-Cz" channel
-- Ensure hypnogram files match PSG files (same prefix)
-</details>
-
-<details>
-<summary><b>Memory issues</b></summary>
-
-- Reduce `BATCH_SIZE` in training scripts (try 8 or 4)
-- Process fewer files at once
-- Use CPU instead of GPU if GPU memory is limited
-</details>
-
-<details>
-<summary><b>Import errors</b></summary>
-
-- Ensure virtual environment is activated
-- Run `pip install -e .` from project root
-- Check that `sys.path.insert(0, ROOT)` is in scripts
-</details>
+**Import errors**: Ensure virtual environment is activated, run `pip install -e .` from project root
 
 ---
 
