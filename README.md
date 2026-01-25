@@ -27,20 +27,6 @@ This implementation is inspired by and based on the original DeepSleepNet work:
 - **Original Paper**: Supratak et al., "DeepSleepNet: a Model for Automatic Sleep Stage Scoring Based on Raw Single-Channel EEG," *IEEE Transactions on Neural Systems and Rehabilitation Engineering*, 2017
 - **Original Repository**: [akaraspt/deepsleepnet](https://github.com/akaraspt/deepsleepnet)
 
-This reimplementation includes:
-- ✅ Modern PyTorch implementation with modular architecture
-- ✅ Comprehensive evaluation and visualization tools
-- ✅ Automatic class weighting and preprocessing pipeline
-- ✅ Detailed documentation and project structure
-
-### Key Capabilities
-
-- 🧠 **Advanced Architecture**: Dual-branch CNN (temporal + frequency) + Bidirectional LSTM
-- ⚖️ **Class Imbalance Handling**: Automatic class weighting using inverse frequency method
-- 🔄 **End-to-End Pipeline**: From raw EDF files to trained model and evaluation
-- 📊 **Comprehensive Metrics**: Accuracy, precision, recall, F1-score, Cohen's kappa
-- 📈 **Rich Visualizations**: Confusion matrices, per-class metrics, distribution plots
-
 ---
 
 ## 🎯 Project Objectives
