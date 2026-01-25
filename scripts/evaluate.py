@@ -26,7 +26,7 @@ DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 
 def main():
     data_path = os.path.join(ROOT, 'data', 'preprocessed')
-    model_path = get_model_path(ROOT, prefer_best=False)
+    model_path = get_model_path(ROOT, prefer_best=True)
 
     if model_path is None:
         logger.error("Model checkpoint not found")
